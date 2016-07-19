@@ -1,0 +1,17 @@
+/*Tiff css edits*/
+
+body {
+	color: red;
+}
+
+.catBoxHome {
+	height: 50px;
+	width: 25%;
+	background-color: red;
+}
+
+#categories .row-styling {
+	margin-right: 0px;
+    margin-left: 0px;
+    padding: 0;
+}
