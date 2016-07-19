@@ -1,0 +1,23 @@
+/*UNIVERSAL/GLOBAL STYLES MADE BY US*/
+/* there is a global _ui.css but that is their original
+let's try to edit this one in case anything breaks! :) */
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,700);
+
+
+body {
+
+font-family: Ubuntu;
+font-weight: 400;
+
+}
+
+h1 {
+
+
+}
+
+h2 {
+
+
+}

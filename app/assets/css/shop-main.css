@@ -1,6 +1,4 @@
-/*Tiff css edits*/
-
-/*jumbotron*/
+/*JUMBOTRON*/
 
 #jumbo-home{
 	margin-bottom: 0;
@@ -12,12 +10,11 @@
 	background-image: url("../img/glasses.img/shoppingmain/hero1.jpg");
 }
 
-/*category*/
+/*CATEGORY*/
 
 .cat-box {
 	height: 160px;
 	width: 25%;
-	/*background-color: red;*/
 }
 
 #categories .row-styling {
@@ -35,7 +32,7 @@
 	display: inline-block;
 }
 
-/*individual cat images*/
+/*INDIVIDUAL PAGES*/
 .doc-img {
 	height: 100%;
 	background-image: url("../img/glasses.img/shoppingmain/category-doc.jpg");
