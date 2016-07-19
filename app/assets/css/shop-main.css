@@ -2,13 +2,22 @@
 
 /*jumbotron*/
 
+#jumbo-home{
+	margin-bottom: 0;
+}
+
+.jumbo-image{
+	height: 500px;
+	background-size: cover;
+	background-image: url("../img/glasses.img/shoppingmain/hero1.jpg");
+}
 
 /*category*/
 
 .cat-box {
 	height: 160px;
 	width: 25%;
-	background-color: red;
+	/*background-color: red;*/
 }
 
 #categories .row-styling {
@@ -29,6 +38,6 @@
 /*individual cat images*/
 .doc-img {
 	height: 100%;
-	background-image: url("../img/glasses.img/shoppingmain/catagory-doc.jpg");
+	background-image: url("../img/glasses.img/shoppingmain/category-doc.jpg");
 }
 
