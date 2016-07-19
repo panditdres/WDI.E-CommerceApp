@@ -24,7 +24,45 @@
 				//success callback
 				console.log(res);
 				self.products = res.data.products;
-				return res.data.products;
+
+				if(self.products.length == 0) {
+					self.products.push({
+						name: 'Micro',
+						description: 'hello',
+						category: 'sunglasses',
+						price: '$40',
+						quantity: '1',
+						status:'avaiable'
+						})
+					self.products.push({
+						name: 'Doc',
+						description: 'hello',
+						category: 'sunglasses',
+						price: '$40',
+						quantity: '1',
+						status:'avaiable'
+						})
+					self.products.push({
+						name: 'State',
+						description: 'hello',
+						category: 'sunglasses',
+						price: '$40',
+						quantity: '1',
+						status:'avaiable'
+						})
+					self.products.push({
+						name: 'Snow',
+						description: 'hello',
+						category: 'sunglasses',
+						price: '$40',
+						quantity: '1',
+						status:'avaiable'
+						})
+				}
+				console.log(self.products)
+
+				return self.products;
+				// return res.data.products;
 			},function(res){
 				//error callback
 				console.log(res);

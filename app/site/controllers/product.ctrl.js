@@ -50,21 +50,21 @@
 			//TODO #2
 			//create product object, pass to product service
 			//Update text in button
-			apiSrv.addProduct(product);
+			productSrv.addProduct(product);
 		}
 
 		function updateProduct(product, productId){
 			//TODO #2
 			//create product object, pass to product service
 			//Update text in button
-			apiSrv.updateProduct(product, productId);
+			productSrv.updateProduct(product, productId);
 		}
 
 		function deleteProduct(productId){
 			//TODO #2
 			//remove product, pass to product service
 			//update text in button
-			apiSrv.deleteProduct(productId);
+			productSrv.deleteProduct(productId);
 		}
 	}
 
