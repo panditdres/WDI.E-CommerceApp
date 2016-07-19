@@ -1,11 +1,12 @@
 /*Tiff css edits*/
 
-body {
-	color: red;
-}
+/*jumbotron*/
 
-.catBoxHome {
-	height: 50px;
+
+/*category*/
+
+.cat-box {
+	height: 160px;
 	width: 25%;
 	background-color: red;
 }
@@ -15,3 +16,19 @@ body {
     margin-left: 0px;
     padding: 0;
 }
+
+.cat-text {
+	border-bottom: 1px dashed rgba(255, 255, 255, .5);
+	position: absolute;
+	bottom: 10%;
+	left: 45%;
+	padding: 2%;
+	display: inline-block;
+}
+
+/*individual cat images*/
+.doc-img {
+	height: 100%;
+	background-image: url("../img/glasses.img/shoppingmain/catagory-doc.jpg");
+}
+
