@@ -8,20 +8,10 @@
 		var productVm = this;
 
 		productVm.categories = [
-			{label:'Shirts',value:'shirts'},
-			{label:'Pants',value:'pants'},
-			{label:'Shoes',value:'shoes'},
-			{label:'Outerwear',value:'outerwear'},
-			{label:'Accessories',value:'accessories'},
+			{label:'Eyeglasses',value:'eyeglasses'},
+			{label:'Sunglasses',value:'sunglasses'},
 		];
-		productVm.product = {
-			name:'',
-			description:'',
-			category: '',
-			price:'',
-			quantity:'',
-			status:''
-		};
+		productVm.product = {};
 		productVm.product_update_btn = 'Update Product';
 		productVm.product_delete_btn = 'Remove Product';
 		
@@ -46,17 +36,38 @@
 		productVm.updateProduct = updateProduct;
 		productVm.deleteProduct = deleteProduct;
 
-		function addProduct(product){
+		function addProduct(){
 			//TODO #2
 			//create product object, pass to product service
 			//Update text in button
-			productSrv.addProduct(product);
+			var glasses = {
+				name: productVm.name,
+				image: productVm.image,
+				description: productVm.description,
+				category: productVm.category,
+				price: productVm.price,
+				quantity: productVm.quantity,
+				//status:
+			}
+			console.log("Product added");
+			console.log(glasses)
+			productSrv.addProduct(glasses);
 		}
 
 		function updateProduct(product, productId){
 			//TODO #2
 			//create product object, pass to product service
 			//Update text in button
+			api.request('/products/' + productId, 'GET')
+			var updateGlasses = {
+				name: productVm.name,
+				image: productVm.image,
+				description: productVm.description,
+				category: productVm.category,
+				price: productVm.price,
+				quantity: productVm.quantity,
+			}
+
 			productSrv.updateProduct(product, productId);
 		}
 

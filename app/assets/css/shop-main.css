@@ -14,7 +14,7 @@
 
 .cat-box {
 	height: 160px;
-	width: 25%;
+/*	width: 25%;*/
 }
 
 #categories .row-styling {
@@ -36,5 +36,9 @@
 .doc-img {
 	height: 100%;
 	background-image: url("../img/glasses.img/shoppingmain/category-doc.jpg");
+}
+.pic-img {
+	width: 100%;
+	overflow: hidden;
 }
 

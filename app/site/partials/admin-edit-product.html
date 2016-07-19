@@ -18,8 +18,7 @@
 		<div>
 			<label>Category</label>
 			<!-- TODO #2: Set Options -->
-			<select name="category">
-			</select>
+			<select ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category" name="category">
 		</div>
 		<div>
 			<label>Price</label>
