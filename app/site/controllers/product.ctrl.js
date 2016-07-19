@@ -14,7 +14,14 @@
 			{label:'Outerwear',value:'outerwear'},
 			{label:'Accessories',value:'accessories'},
 		];
-		productVm.product = {};
+		productVm.product = {
+			name:'',
+			description:'',
+			category: '',
+			price:'',
+			quantity:'',
+			status:''
+		};
 		productVm.product_update_btn = 'Update Product';
 		productVm.product_delete_btn = 'Remove Product';
 		
@@ -39,23 +46,25 @@
 		productVm.updateProduct = updateProduct;
 		productVm.deleteProduct = deleteProduct;
 
-		function addProduct(){
+		function addProduct(product){
 			//TODO #2
 			//create product object, pass to product service
 			//Update text in button
-			
+			apiSrv.addProduct(product);
 		}
 
-		function updateProduct(){
+		function updateProduct(product, productId){
 			//TODO #2
 			//create product object, pass to product service
 			//Update text in button
+			apiSrv.updateProduct(product, productId);
 		}
 
-		function deleteProduct(){
+		function deleteProduct(productId){
 			//TODO #2
 			//remove product, pass to product service
 			//update text in button
+			apiSrv.deleteProduct(productId);
 		}
 	}
 
