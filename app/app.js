@@ -8,13 +8,13 @@
 		.module('shopApp')
 		.config(function($stateProvider, $httpProvider, $urlRouterProvider){
 			
-			$urlRouterProvider.otherwise('/');
+			$urlRouterProvider.otherwise('/shop/home');
 
 			$stateProvider
 			.state('shop', {
 				url:'/shop',
 				templateUrl:'site/partials/shop.html', 
-				controller:'ShopCtrl as ctrl'
+				controller:'NavCtrl as ctrl'
 			})
 
 			.state('shop.main',{
@@ -45,6 +45,12 @@
 				url:'/checkout',
 				templateUrl:'site/partials/checkout.html',
 				controller:'CheckoutCtrl as ctrl'
+			})
+
+			.state('shop.order',{
+				url:'/order',
+				templateUrl:'site/partials/order-form.html',
+				controller:'OrderFormCtrl as ctrl'
 			})
 
 			.state('admin',{
