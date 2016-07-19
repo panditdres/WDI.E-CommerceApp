@@ -1,6 +1,7 @@
 #shop_page .icon-box {
-	border: solid 5px black;
 }
 
-#shop_page .icon-State.resize {
+#shop_page .icon-State_resize {
+	width: 30%;
+	height: 30%;
 }
