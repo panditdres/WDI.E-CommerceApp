@@ -8,7 +8,7 @@
 		.module('shopApp')
 		.config(function($stateProvider, $httpProvider, $urlRouterProvider){
 			
-			$urlRouterProvider.otherwise('/');
+			$urlRouterProvider.otherwise('/shop/home');
 
 			$stateProvider
 			.state('shop', {
