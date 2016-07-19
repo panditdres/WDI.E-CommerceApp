@@ -11,8 +11,14 @@
 			$urlRouterProvider.otherwise('/');
 
 			$stateProvider
-			.state('shop',{
-				url:'/',
+			.state('shop', {
+				url:'/shop',
+				templateUrl:'site/partials/shop.html', 
+				controller:'ShopCtrl as ctrl'
+			})
+
+			.state('shop.main',{
+				url:'/home',
 				templateUrl:'site/partials/shop-main.html',
 				controller:'ShopCtrl as ctrl',
 				//TODO #3 resolve products before main page load
@@ -21,6 +27,24 @@
 						return productSrv.getProducts();
 					}
 				}
+			})
+
+			.state('shop.page', {
+				url:'/page',
+				templateUrl:'site/partials/shop-page.html',
+				controller:'ShopPageCtrl as ctrl'
+			})
+
+			.state('shop.productPage', {
+				url:'/productPage',
+				templateUrl:'site/partials/product-page.html',
+				controller:'ProductPageCtrl as ctrl'
+			})
+
+			.state('shop.checkout',{
+				url:'/checkout',
+				templateUrl:'site/partials/checkout.html',
+				controller:'CheckoutCtrl as ctrl'
 			})
 
 			.state('admin',{
