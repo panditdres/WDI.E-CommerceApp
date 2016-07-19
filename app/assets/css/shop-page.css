@@ -1,7 +1,14 @@
 #shop_page .icon-box {
+	display: inline-block;
 }
 
 #shop_page .icon-State_resize {
-	width: 30%;
-	height: 30%;
+	align-items: vertical;
+	width: 100%;
+	height: 100%;
+}
+
+#shop_page .frames_sidebar{
+	background-color: #F7F7F7;
+	height: 300px;
 }
