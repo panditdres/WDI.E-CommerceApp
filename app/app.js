@@ -32,7 +32,7 @@
 			.state('shop.page', {
 				url:'/page',
 				templateUrl:'site/partials/shop-page.html',
-				controller:'ShopPageCtrl as ctrl'
+				controller:'ShopCtrl as ctrl'
 			})
 
 			.state('shop.productPage', {
