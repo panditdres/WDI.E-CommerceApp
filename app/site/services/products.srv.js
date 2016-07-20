@@ -28,7 +28,8 @@
 				self.products = res.data.products;
 
 				for (var i=0; i< self.products.length; i++) {
-					self.products[i].description = JSON.parse(self.products[i].description);
+					console.log(self.products[i].description);
+					// self.products[i].description = JSON.parse(self.products[i].description);
 					// console.log(JSON.parse(self.products[i].description))
 				}
 
