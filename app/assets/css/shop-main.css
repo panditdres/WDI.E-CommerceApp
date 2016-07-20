@@ -13,8 +13,9 @@
 /*CATEGORY*/
 
 .cat-box {
-	height: 160px;
-/*	width: 25%;*/
+	height: 290px;
+	width: 25%;
+	padding: 5px;
 }
 
 #categories .row-styling {
@@ -27,7 +28,8 @@
 	border-bottom: 1px dashed rgba(255, 255, 255, .5);
 	position: absolute;
 	bottom: 10%;
-	left: 45%;
+	left: 50%;
+	
 	padding: 2%;
 	display: inline-block;
 }
@@ -37,7 +39,7 @@
 	height: 100%;
 	background-image: url("../img/glasses.img/shoppingmain/category-doc.jpg");
 }
-.pic-img {
+.doc-img > .pic-img {
 	width: 100%;
 	overflow: hidden;
 }
