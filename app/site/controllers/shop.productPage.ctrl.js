@@ -8,6 +8,8 @@
 
 		//TODO #3 Capture resolved products for view
 		shopVm.products = productSrv.getProducts();
+		
+
 		console.log("SHOP VM PRODUCTS",shopVm.products)
 
 		shopVm.quantities = [
@@ -27,3 +29,4 @@
 	}
 
 })();
+

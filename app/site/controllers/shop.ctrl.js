@@ -3,12 +3,11 @@
 		.module('shopApp')
 		.controller('ShopCtrl',ShopCtrl)
 
-	function ShopCtrl($scope,productSrv){
+	function ShopCtrl($scope,productSrv, $state){
 		var shopVm = this;
 
 		//TODO #3 Capture resolved products for view
 		shopVm.products    = productSrv.getProducts();
-		shopVm.getProducts = productSrv.
 		console.log("SHOP VM PRODUCTS",shopVm.products)
 
 		//watch for any changes to model data
@@ -17,8 +16,19 @@
 		}, function (newValue) {
 		    shopVm.products = productSrv.products;
 		});
+		shopVm.goToProductPage = goToProductPage;
+
+		function goToProductPage() {
+			console.log("hello mitch, please work");
+			$state.go('shop.productPage');
+		}
+
 	}
 
+		
+
 })();
+
+
 
 
