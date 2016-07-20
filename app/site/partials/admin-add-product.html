@@ -26,11 +26,11 @@
 		</div>
 		<div>
 			<label>Price</label>
-			<input type="number" name="price" ng-model="ctrl.price" required>
+			<input type="number" min="0" name="price" ng-model="ctrl.price" required>
 		</div>
 		<div>
 			<label>Quantity</label>
-			<input type="number" name="quantity" ng-model="ctrl.quantity" required>
+			<input type="number" min="0" name="quantity" ng-model="ctrl.quantity" required>
 		</div>
 		<div>
 			<button type="submit">Add Product</button>
