@@ -2,35 +2,36 @@
 
 
   <div id="checkout" class="checkout-container">
-    	<h1 id="checkouthead"> you have {{}} items in your cart: {{currency}}
+    	<h1 id="checkouthead"> you have x items in your cart: $x
   	</h1>
     	
-    	<button id="checkout-button" type="button" class="btn btn-primary btn-lg">Check Out</button>
+    	<button id="checkout-button" type="button" class="btn btn-primary btn-lg" ui-sref="shop.order">Check Out</button>
 
   </div>
 
   <div id="checkouttable">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Quantity</th>
-        <th>Item</th>
-        <th>Remove</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Quantity</th>
+          <th></th>
+          <th>Item</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="items in ctrl.cart">
+          <td>{{items.amount}}</td>
+          <td><img ng-src="{{items.item.image}}"></td>
+          <td>{{items.item.name}} - {{items.item.category}} </td>
+          <td>${{items.item.price}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
   <div id = "subtotal"> 
-  	SUBTOTAL: {{|currency}}
+  	SUBTOTAL: $y
   </div>
   </div>
 

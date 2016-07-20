@@ -11,13 +11,7 @@
 			{label:'Eye Glasses',value:'Eye Glasses'},
 			{label:'Sun Glasses',value:'Sun Glasses'},
 		];
-		productVm.quantities = [
-			{number: '1', value: '1'},
-			{number: '2', value: '2'},
-			{number: '3', value: '3'},
-			{number: '4', value: '4'},
-			{number: '5', value: '5'}
-		]
+
 		productVm.product = {};
 		productVm.product_update_btn = 'Update Product';
 		productVm.product_delete_btn = 'Remove Product';

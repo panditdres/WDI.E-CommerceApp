@@ -1,25 +1,28 @@
 <div id="product-page">
-	<div class="jumbotron"> <img src="http://daily-movement.com/wp-content/uploads/2014/08/PS-Black.jpg"> </div>
-
 	<div class="container">
+		<div class="jumbotron"> 
+			<img ng-src="{{ctrl.product.data.product.image}}"> 
+		</div>
+
+	
 		<div class="row">
 			<div class="col-md-6">
-				<p>Name: {{ctrl.nameFrame}}</p>
-				<p>ID: {{ctrl.frameID}}</p>
-				<p> {{ctrl.framePrice}} </p>
+				<p>Name: {{ctrl.product.data.product.name}}</p>
+				<p>ID: {{ctrl.product.data.product.id}}</p>
+				<p>Price: ${{ctrl.product.data.product.price}} </p>
 				<div>
 					<label>Quantity</label>
 					<select ng-options="option.value as option.number for option in ctrl.quantities" ng-model="ctrl.quantity" name="quantity">
 					</select>
 				</div>
-				<button> ADD TO CART </button>
+				<button ng-click="ctrl.addCart(ctrl.product.data.product)"> ADD TO CART </button>
 			</div>
 
 			<div class="col-md-6">
-				<p>About Frame</p>
-				<p>Frame Fit: {{ctrl.frameFit}}</p>
-				<p>Measurements: {{ctrl.measurements}}</p>
-				<p>Description: {{ctrl.frameDescription}}</p>
+				<h7>About Frame</h7>
+				<p>Frame Fit: Wide</p>
+				<p>Measurements: 58-18-140</p>
+				<p>Description: {{ctrl.description.details}}</p>
 			</div>
 		</div>
 	</div>
@@ -54,5 +57,3 @@
 
 
 
-
-</div>

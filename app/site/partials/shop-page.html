@@ -47,13 +47,12 @@
 	            </div>
 
 			</div>
-
 			<!-- collection section  -->
     		<div class="col-md-10">
                 <div class="col-md-4 product_buffer" ng-repeat="products in ctrl.products | filter: ctrl.selectFilter(products)" 
 
 
-                ng-click="ctrl.goToProductPage()">
+                ng-click="ctrl.goToProductPage(products.id)">
                 <img class="product_resize" ng-src="{{products.image}}">
             </div>
 
@@ -62,4 +61,5 @@
           
         </div><!-- </div> end of row -->
 	</div> <!-- end of container -->
+
 </section>
