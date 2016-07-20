@@ -21,6 +21,11 @@ p {
 	margin-bottom: 0;
 }
 
+.gap {
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
 p.company {
 	margin-bottom: 10px;
 
@@ -84,6 +89,7 @@ p.company {
 /*FOOTER STYLING*/
 .footer-right{
 	float:right;
+	font-size: 20px;
 }
 
 footer {

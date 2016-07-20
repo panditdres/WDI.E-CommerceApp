@@ -7,7 +7,8 @@
 		var shopVm = this;
 
 		//TODO #3 Capture resolved products for view
-		shopVm.products;
+		shopVm.products = productSrv.getProducts();
+		console.log("SHOP VM PRODUCTS",shopVm.products)
 
 		//watch for any changes to model data
 		$scope.$watch(function(){

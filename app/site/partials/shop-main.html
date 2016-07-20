@@ -31,15 +31,16 @@
 	<div class="container">
 		<div id="categories" class="row row-styling">
 
-			<div class="col-xs-6 col-sm-4 col-md-3 cat-box">
-				<div class="doc-img"> 
+			<div class="col-xs-6 col-sm-4 col-md-3 cat-box" ng-repeat="category in ctrl.products">
+				<div class="doc-img">
+					<img class="pic-img" ng-src="{{category.image}}"> 
 					<div class="cat-text">
-						DOC
+						{{category.name}}
 					</div> 
 				</div> 
 			</div>
 
-			<div class="col-xs-6 col-sm-4 col-md-3 cat-box">
+			<!-- <div class="col-xs-6 col-sm-4 col-md-3 cat-box">
 				<div class="doc-img">
 					<div class="cat-text">
 						MICRO
@@ -61,7 +62,7 @@
 					 SNOW
 					</div> 
 				</div>
-			</div> 
+			</div>  -->
 
 		</div>
 	</div>

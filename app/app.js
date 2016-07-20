@@ -41,6 +41,11 @@
 				controller:'ProductPageCtrl as ctrl'
 			})
 
+			.state('shop.about', {
+				url:'/about',
+				templateUrl:'site/partials/about.html',
+			})
+
 			.state('shop.checkout',{
 				url:'/checkout',
 				templateUrl:'site/partials/checkout.html',

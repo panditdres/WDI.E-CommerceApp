@@ -8,20 +8,10 @@
 		var productVm = this;
 
 		productVm.categories = [
-			{label:'Shirts',value:'shirts'},
-			{label:'Pants',value:'pants'},
-			{label:'Shoes',value:'shoes'},
-			{label:'Outerwear',value:'outerwear'},
-			{label:'Accessories',value:'accessories'},
+			{label:'Eye Glasses',value:'Eye Glasses'},
+			{label:'Sun Glasses',value:'Sun Glasses'},
 		];
-		productVm.product = {
-			name:'',
-			description:'',
-			category: '',
-			price:'',
-			quantity:'',
-			status:''
-		};
+		productVm.product = {};
 		productVm.product_update_btn = 'Update Product';
 		productVm.product_delete_btn = 'Remove Product';
 		
@@ -30,8 +20,20 @@
 			.then(function(res){
 				console.log(res);
 				productVm.product = res.data.product;
+
+				productVm.name 			= productVm.product.name;
+				productVm.image 		= productVm.product.image;
+				productVm.description 	= productVm.product.description;
+				productVm.category 		= productVm.product.category;
+				productVm.price 		= productVm.product.price;
+				productVm.quantity		= productVm.product.quantity;
+				productVm.ID    		= productVm.product.id;
+
+
+				console.log(productVm.ID)
 				//TODO #2 set category based on edit form based on 
 				//product category
+				console.log(productVm.product);
 				for(var index in productVm.categories){
 					if(productVm.product.category == productVm.categories[index].value){
 						productVm.set_category = productVm.categories[index].value;
@@ -42,22 +44,43 @@
 		}
 
 		//public functions
-		productVm.addProduct = addProduct;
+		productVm.addProduct    = addProduct;
 		productVm.updateProduct = updateProduct;
 		productVm.deleteProduct = deleteProduct;
 
-		function addProduct(product){
+		function addProduct(){
 			//TODO #2
 			//create product object, pass to product service
 			//Update text in button
-			productSrv.addProduct(product);
+			var glasses = {
+				name: productVm.name,
+				image: productVm.image,
+				description: productVm.description,
+				category: productVm.category,
+				price: productVm.price,
+				quantity: productVm.quantity,
+				//status:
+			}
+			// console.log("Product added");
+			// console.log(glasses)
+			productSrv.addProduct(glasses);
 		}
 
-		function updateProduct(product, productId){
+		function updateProduct(productId){
 			//TODO #2
 			//create product object, pass to product service
 			//Update text in button
-			productSrv.updateProduct(product, productId);
+			
+			var updateGlasses = {
+				name: productVm.name,
+				image: productVm.image,
+				description: productVm.description,
+				category: productVm.category,
+				price: productVm.price,
+				quantity: productVm.quantity,
+			}
+			console.log("UPDATE",updateGlasses)
+			productSrv.updateProduct(updateGlasses, productId);
 		}
 
 		function deleteProduct(productId){
