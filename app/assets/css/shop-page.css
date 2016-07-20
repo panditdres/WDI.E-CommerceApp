@@ -1,12 +1,46 @@
-#shop_page .product_resize {
+/*#shop_page .product_resize {
 	width: 80%;
 	height: 80%;
 }
 
 #shop_page .product_buffer {
 	margin-bottom: 40px;
+}*/
+
+/*#shop.page .icon_resize {
+	resize: 50%;
+}*/
+
+/*COLLECTION PRODUCTS*/
+
+
+
+.collection-products {
+	width: 70%;
 }
 
-#shop.page .icon_resize {
-	resize: 50%;
+/*SIDE BAR*/
+
+.cat-names {
+	display:inline;
 }
+
+.centered-text {
+	text-align: center;
+}
+
+.images {
+	width: 100%;
+	background-size: cover;
+}
+
+
+.forms {
+	padding-top: 3%;
+	font-size: 12px;
+}
+
+.radio-buttons {
+	padding-top: 5%;
+}
+

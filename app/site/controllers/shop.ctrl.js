@@ -23,6 +23,34 @@
 			$state.go('shop.productPage');
 		}
 
+		shopVm.check = function() {
+			console.log(shopVm.sunCheck)
+		}
+
+		shopVm.selectFilter = selectFilter; 
+		
+		function selectFilter(products) {
+			console.log(products);
+				if (shopVm.sunCheck == true) {
+					if (products.category == "Sun Glasses") {
+						console.log('sunglass');
+						return true
+					}
+				} else if (shopVm.eyeCheck == true) {
+					if (products.category == "Eye Glasses") {
+						console.log('eyeglass')
+						return true
+					}
+				} else {
+					console.log('none')
+					return false
+				}
+
+
+		 }
+
+
+
 	}
 
 		

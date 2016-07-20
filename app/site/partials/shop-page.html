@@ -1,22 +1,65 @@
+
+
+
 <section id="shop_page">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-2">
-					<div class="col-md-6">
-						<img class="icon_resize" src="../../assets/img/Glass_icons/Doc.png"></div>
-					<div class="col-md-6">
-						<img src="../../assets/img/Glass_icons/Snow.png"></div>
+
+			<!-- side section -->
+			<div class="col-md-2"> 
+				<div class="row">  
+					<div class="col-md-6 centered-text">
+						<img class="images" src="../../assets/img/Glass_icons/Doc.png">
+						<p class="cat-names"> doc </p>
+					</div>
+						
+					<div class="col-md-6 centered-text">
+						<img class="images" src="../../assets/img/Glass_icons/Micro.png">
+						<p class="cat-names"> micro </p>
+					</div>
+				</div>
+				
+				<div class="row"> 
+					<div class="col-md-6 centered-text">
+						<img class="images" src="../../assets/img/Glass_icons/State.png">
+						<p> state </p>
+					</div>
 					
-					<div class="col-md-6">
-						<img src="../../assets/img/Glass_icons/State.png"></div>
-					<div class="col-md-6">
-						<img src="../../assets/img/Glass_icons/Micro.png"></div>
+					<div class="col-md-6 centered-text">
+						<img class="images" src="../../assets/img/Glass_icons/Snow.png">
+						<p> snow </p>
+					</div>	
+				</div>
+
+				  <!-- radio buttons  -->
+	            <div class="radio-buttons">
+					<form action="demo_form.asp" method="get">
+
+						<div class="forms"> 
+						  <input type="checkbox" name="eyewear" value="Eyewear"> Eyewear
+						</div>
+
+						<div class="forms" ng-click="ctrl.check()"> 
+						  <input type="checkbox" name="sunglasses" ng-model="ctrl.sunCheck" value="Sun Glasses" checked="checked"> Sunglasses 
+						</div>
+
+					</form>
+	            </div>
+
 			</div>
-	    		<div class="col-md-10">
-                    <div class="col-md-4 product_buffer" ng-repeat="products in ctrl.products" ng-click="ctrl.goToProductPage()">
-                        <img class="product_resize" ng-src="{{products.image}}">
-                    </div>
-            	</div>
-		</div>
-	</div>
+
+			<!-- collection section  -->
+    		<div class="col-md-10">
+                <div class="col-md-4 product_buffer" ng-repeat="products in ctrl.products | filter: ctrl.selectFilter(products)" 
+
+
+                ng-click="ctrl.goToProductPage()">
+                <img class="product_resize" ng-src="{{products.image}}">
+            </div>
+
+
+
+          
+        </div><!-- </div> end of row -->
+	</div> <!-- end of container -->
 </section>
