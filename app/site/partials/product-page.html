@@ -7,6 +7,11 @@
 				<p>Name: {{ctrl.nameFrame}}</p>
 				<p>ID: {{ctrl.frameID}}</p>
 				<p> {{ctrl.framePrice}} </p>
+				<div>
+					<label>Quantity</label>
+					<select ng-options="option.value as option.number for option in ctrl.quantities" ng-model="ctrl.quantity" name="quantity">
+					</select>
+				</div>
 				<button> ADD TO CART </button>
 			</div>
 
