@@ -3,12 +3,15 @@
 		.module('shopApp')
 		.controller('ShopCtrl',ShopCtrl)
 
-	function ShopCtrl($scope,productSrv, $state){
+
+	function ShopCtrl($scope,productSrv,products,$state){
 		var shopVm = this;
 
 		//TODO #3 Capture resolved products for view
-		shopVm.products    = productSrv.getProducts();
-		console.log("SHOP VM PRODUCTS",shopVm.products)
+		shopVm.products = products;
+		// shopVm.getProducts = productSrv.getProduct();
+		
+		// console.log("SHOP VM PRODUCTS",shopVm.products.category)
 
 		//watch for any changes to model data
 		$scope.$watch(function(){
@@ -16,12 +19,24 @@
 		}, function (newValue) {
 		    shopVm.products = productSrv.products;
 		});
+
 		shopVm.goToProductPage = goToProductPage;
 
-		function goToProductPage() {
+		function goToProductPage(id) {
 			console.log("hello mitch, please work");
-			$state.go('shop.productPage');
+			console.log(id);
+			productSrv.getProduct(id)
+				.then(function(result){
+					console.log(result);
+
+				});
+			$state.go('shop.productPage',{'productId':id});
 		}
+
+		console.log("SHOP VM PRODUCTS",shopVm.products)
+		// Filter by category, use angular
+
+		// filter by product.description.collection
 
 	}
 

@@ -16,6 +16,10 @@
 
 }
 
+table {
+	text-align: center;
+}
+
 #checkouttable { 
 	text-align: center;
 	font-size: 20px; 
@@ -27,4 +31,7 @@
  	margin-right: 150px;
  	margin-bottom: 150px;
  }
-
+#checkouttable img {
+	width: 100px;
+	height: 100px;
+}

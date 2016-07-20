@@ -32,30 +32,50 @@
 			.state('shop.page', {
 				url:'/page',
 				templateUrl:'site/partials/shop-page.html',
-				controller:'ShopCtrl as ctrl'
+				controller:'ShopCtrl as ctrl',
+				resolve:{
+					products: function(productSrv){
+						return productSrv.getProducts();
+					}
+				}
 			})
 
 			.state('shop.productPage', {
-				url:'/productPage',
+				url:'/productPage/:productId',
 				templateUrl:'site/partials/product-page.html',
-				controller:'ProductPageCtrl as ctrl'
+				controller:'ProductPageCtrl as ctrl',
+				resolve:{
+					product: function(productSrv, $stateParams){
+						return productSrv.getProduct($stateParams.productId);
+					}
+				}
 			})
 
 			.state('shop.about', {
 				url:'/about',
-				templateUrl:'site/partials/about.html',
+				templateUrl:'site/partials/about.html'
 			})
 
 			.state('shop.checkout',{
 				url:'/checkout',
 				templateUrl:'site/partials/checkout.html',
-				controller:'CheckoutCtrl as ctrl'
+				controller:'CheckoutCtrl as ctrl',
+				resolve:{
+					products: function(productSrv){
+						return productSrv.getProducts();
+					}
+				}
 			})
 
 			.state('shop.order',{
 				url:'/order',
 				templateUrl:'site/partials/order-form.html',
-				controller:'OrderFormCtrl as ctrl'
+				controller:'OrderFormCtrl as ctrl',
+				resolve:{
+					products: function(productSrv){
+						return productSrv.getProducts();
+					}
+				}
 			})
 
 			.state('admin',{

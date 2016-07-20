@@ -13,8 +13,8 @@
 						<img src="../../assets/img/Glass_icons/Micro.png"></div>
 			</div>
 	    		<div class="col-md-10">
-                    <div class="col-md-4 product_buffer" ng-repeat="products in ctrl.products" ng-click="ctrl.goToProductPage()">
-                        <img class="product_resize" ng-src="{{products.image}}">
+                    <div class="col-md-4 product_buffer" ng-repeat="products in ctrl.products" ng-click="ctrl.goToProductPage(products.id)">
+                        <img class="product_resize" ng-src="{{products.image}}" >
                     </div>
             	</div>
 		</div>

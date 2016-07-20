@@ -8,15 +8,17 @@
 		var self = this;
 		//public variables
 		self.products = [];
-
+		self.cart = [];
 		//public functions
-		self.getProduct = getProduct;
-		self.getProducts = getProducts;
-		self.addProduct = addProduct;
-		self.updateProduct = updateProduct;
-		self.updateProductList = updateProductList;
-		self.removeProduct = removeProduct;
-		self.deleteProduct = deleteProduct;
+		self.getProduct 		= getProduct;
+		self.getProducts 		= getProducts;
+		self.addProduct 		= addProduct;
+		self.updateProduct 		= updateProduct;
+		self.updateProductList 	= updateProductList;
+		self.removeProduct 		= removeProduct;
+		self.deleteProduct 		= deleteProduct;
+		self.addCart 			= addCart;
+		self.removeCart 		= removeCart;
 
 		function getProducts(){
 			return api.request('/products',{},'GET')
@@ -157,6 +159,24 @@
 					delete self.products[i];
 				}
 			}
+		}
+
+		function addCart(product, quantity) {
+			console.log(quantity)
+			
+			var cartItem = {
+				item: product,
+				amount: quantity
+			}	
+				self.cart.push(cartItem);				
+				
+			console.log("TEST");
+			console.log(self.cart);
+			return self.cart;
+		}
+
+		function removeCart(product, productId) {
+
 		}
 	}
 })();
