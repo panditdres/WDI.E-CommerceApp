@@ -1,1 +1,12 @@
-#icon-
+#shop_page .product_resize {
+	width: 80%;
+	height: 80%;
+}
+
+#shop_page .product_buffer {
+	margin-bottom: 40px;
+}
+
+#shop.page .icon_resize {
+	resize: 50%;
+}

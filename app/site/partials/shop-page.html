@@ -1,23 +1,22 @@
-<section>
+<section id="shop_page">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2">
 					<div class="col-md-6">
-						<img src="../../assets/img/Glass_icons/State.png"></div>
+						<img class="icon_resize" src="../../assets/img/Glass_icons/Doc.png"></div>
 					<div class="col-md-6">
 						<img src="../../assets/img/Glass_icons/Snow.png"></div>
 					
-					<div class="col-md-3">
+					<div class="col-md-6">
 						<img src="../../assets/img/Glass_icons/State.png"></div>
-					<div class="col-md-3">
-						<img src="../../assets/img/Glass_icons/Snow.png"></div>
-		</div>
-
-				<div class="col-md-10">
-					<div class="col-md-4" ng-repeat="products in ctrl.products">
-						<img ng-src="{{products.image}}">
-					</div>
-				</div>
+					<div class="col-md-6">
+						<img src="../../assets/img/Glass_icons/Micro.png"></div>
 			</div>
+	    		<div class="col-md-10">
+                    <div class="col-md-4 product_buffer" ng-repeat="products in ctrl.products">
+                        <img class="product_resize" ng-src="{{products.image}}">
+                    </div>
+            	</div>
 		</div>
+	</div>
 </section>
