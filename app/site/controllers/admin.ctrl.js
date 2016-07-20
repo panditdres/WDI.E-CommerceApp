@@ -15,9 +15,9 @@
 		}
 					
 		adminVm.products;
-		if(adminVm.products.length > 0 ){
-			adminVm.is_products = true;
-		}
+		// if(adminVm.products.length > 0 ){
+		// 	adminVm.is_products = true;
+		// }
 
 		//watch for updates to products object
 		$scope.$watch(function(){

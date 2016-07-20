@@ -7,3 +7,9 @@
 	padding-top: 10px;
 	margin-left: 400px;
 }
+
+#shop .jumbotron {
+	padding-top: 0;
+	overflow: hidden;
+	text-align: center;
+}

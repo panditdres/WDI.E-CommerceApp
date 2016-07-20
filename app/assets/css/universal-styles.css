@@ -1,0 +1,97 @@
+/*UNIVERSAL/GLOBAL STYLES MADE BY US*/
+/* there is a global _ui.css but that is their original
+let's try to edit this one for global in case anything breaks!
+
+NAV BAR STYLINGS INCLUDED
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,700);
+
+body {
+font-family: Ubuntu;
+font-weight: 400;
+}
+
+h1 {
+font-weight: 300;
+letter-spacing: 2px
+}
+
+p {
+	margin-bottom: 0;
+}
+
+.gap {
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+p.company {
+	margin-bottom: 10px;
+
+}
+
+
+/*NAV BAR*/
+
+.brand-icon-div {
+	width: 80%;
+	position: relative;
+	left: 10%;
+	border-bottom: 2px solid black;
+}
+
+.icon-padding {
+	display: inline-block;
+	margin-bottom: 3%;
+}
+
+.navmain-div {
+	float: center;
+	width: 80%;
+	position: relative;
+	left: 10%;
+}
+
+.nav-display > li {
+	padding-top: 5%;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: grey;
+	box-shadow: none;
+}
+
+.login-padding {
+	padding-left: 5%;
+}
+
+.nav-display {
+	display: inline;
+	}
+
+.nav-items {
+	padding-right:3%;
+}
+
+.nav-float {
+	float: right;
+} 
+
+.cart-num { 
+	width: 15px;
+	height: 15px;
+	border: 1px solid #2C3539;
+	border-radius: 2px;
+	display: inline-block;
+} 
+
+/*FOOTER STYLING*/
+.footer-right{
+	float:right;
+	font-size: 20px;
+}
+
+footer {
+	margin-top: 2%;
+}

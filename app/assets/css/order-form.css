@@ -1,0 +1,19 @@
+#yourdetails {
+
+	text-decoration: underline;
+	font-size: 15px;
+}
+
+.orderform {
+	width: 30%;
+	height: 30%;
+	border: 50px;
+
+
+}
+
+#submit-button {
+	float: right;
+	margin-top: 2%;
+
+}

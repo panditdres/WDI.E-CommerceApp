@@ -1,45 +1,79 @@
-<div id="shop">
-  <div><h1>Heldere Glazen<h1></div>
+<!-- HOME ICON -->
+<div class="brand-icon-div">
 
-  <nav class="text navbar navbar-default">
-   <div>
-     <!-- Brand and toggle get grouped for better mobile display -->
-     <div class="navbar-header">
-       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-         <span class="sr-only">Toggle navigation</span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-       </button>
-     </div>
+  <div class="icon-padding"> 
+    <h1 ui-sref="shop.main" class="">Heldere Glazen <h1> 
+  </div>
+  
+</div>
 
-     <!-- Collect the nav links, forms, and other content for toggling -->
-     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-     <ul class="nav navbar-nav">
-         <li class="active"><a ui-sref="">All Collection<span class="sr-only">(current)</span></a></li>
-         </li>
-     </ul>
-     
-        <ul class="nav navbar-nav navbar-right" class="active">
-          <li class="active">
-          <a class="home" href="#">Login<span id="home" class="sr-only">(current)</span></a>
-          </li>
-           <li class="active">
-          <a class="home" href="#">Cart<span id="home" class="sr-only">(current)</span></a>
-          </li>
+<!-- NAV BAR -->
+<nav> 
+  <div div class="navmain-div">
+    <div class="nav-display">
+      <ul class="nav-display"> 
+        <li class="nav-display nav-items" ui-sref="shop.page">Collection</li>
+        <li class="nav-display nav-items" ui-sref="shop.about">Our Story </li>
+      </ul>
+    </div> <!-- left nav -->
 
-        </ul>
-     </div><!-- /.navbar-collapse -->
-   </div><!-- /.container-fluid -->
-  </nav>
+    <div class="nav-display nav-float"> 
+      <ul class="nav-display">
+        <li class="nav-display nav-items login-padding" ui-sref="admin"> Login </li>
+        <li class="nav-display nav-items " ui-sref="shop.checkout"> Cart </li>
+        <li class="nav-display nav-items"> <div class="cart-num"> </div> </li>
+      </ul>
+    </div>
+  </div> <!-- right nav  -->
+
+</nav>
+
+<!-- PREVIOUS NAV -->
+<!-- <div id="shop">
+  <div class="container">
+  <div><h1 ui-sref="shop.main">Heldere Glazen<h1></div>
+
+    <nav class="text navbar navbar-default">
+     <div class="container">
+       Brand and toggle get grouped for better mobile display
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+       </div>
+
+       Collect the nav links, forms, and other content for toggling
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+       <ul class="nav navbar-nav">
+           <li class="active"><a ui-sref="shop.page">All Collection<span class="sr-only">(current)</span></a></li>
+           </li>
+       </ul>
+       
+          <ul class="nav navbar-nav navbar-right" class="active">
+            <li class="active">
+            <a class="home" ui-sref="admin">Login<span id="home" class="sr-only">(current)</span></a>
+            </li>
+             <li class="active">
+            <a class="home" ui-sref="shop.checkout">Cart<span id="home" class="sr-only">(current)</span></a>
+            </li>
+
+          </ul>
+       </div> /.navbar-collapse
+     </div>/.container-fluid
+    </nav>
+  </div> -->
 
   <div ui-view=""></div>
 
+<!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <p class="company">Heldere Glazen</p> 
+          <h5 class="company">Heldere Glazen</h5> 
           <p>Location</p>
           <p>Email: heldere@glazen.com</p>
           <p>Phone: +49 711 246784</p>
@@ -47,14 +81,17 @@
         </div>
 
         <div class="col-md-6">
-          <button class="btn btn-primary gap">Subscribe</button>
-          <p class="icons gap">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-          </p>
+          <div class="footer-right"> 
+<!--      <button type="button" class="btn btn-primary gap">Subscribe</button>-->        
+            <p class="icons">
+              <a href="https://github.com/panditdres/WDI.E-CommerceApp"><i class="fa fa-github gap btn" aria-hidden="true" ></i></a>
+              <a href="https://www.facebook.com"><i class="fa fa-facebook gap btn" aria-hidden="true"></i></a>
+              <a href="https://www.twitter.com"><i class="fa fa-twitter gap btn" aria-hidden="true" href="https://www.twitter.com"></i></a>
+              <a href="https://www.instagram.com"><i class="fa fa-instagram gap btn" aria-hidden="true" ></i></a>
+            </p>
+          </div>
         </div>
+      
       </div>
     </div>  
   </footer>
-</div>

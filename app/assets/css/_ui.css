@@ -52,8 +52,8 @@ nav{
 	height:55px;
 	line-height:55px;
 	color:#ff6d37;
-	border-bottom:1px solid #d8d8d8;
-	box-shadow: 0 4px 2px -2px #d8d8d8;
+	/*border-bottom:1px solid #d8d8d8;
+	box-shadow: 0 4px 2px -2px #d8d8d8;*/
 }
 
 nav .left-nav{

@@ -1,13 +1,21 @@
-/*Tiff css edits*/
+/*JUMBOTRON*/
 
-body {
-	color: red;
+#jumbo-home{
+	margin-bottom: 0;
 }
 
-.catBoxHome {
-	height: 50px;
+.jumbo-image{
+	height: 500px;
+	background-size: cover;
+	background-image: url("../img/glasses.img/shoppingmain/hero1.jpg");
+}
+
+/*CATEGORY*/
+
+.cat-box {
+	height: 290px;
 	width: 25%;
-	background-color: red;
+	padding: 5px;
 }
 
 #categories .row-styling {
@@ -15,3 +23,24 @@ body {
     margin-left: 0px;
     padding: 0;
 }
+
+.cat-text {
+	border-bottom: 1px dashed rgba(255, 255, 255, .5);
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	
+	padding: 2%;
+	display: inline-block;
+}
+
+/*INDIVIDUAL PAGES*/
+.doc-img {
+	height: 100%;
+	background-image: url("../img/glasses.img/shoppingmain/category-doc.jpg");
+}
+.doc-img > .pic-img {
+	width: 100%;
+	overflow: hidden;
+}
+
