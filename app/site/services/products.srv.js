@@ -75,18 +75,24 @@
 		}
 
 		function addProduct(product){
+			console.log(product);
 			api.request('/products',product,'POST')
 			.then(function(res){
 				console.log(res);
 				if(res.status === 200){
 					//product was added successfully
 					self.products.push(res.data.product);
+					console.log("RES DATA", res.data.product);
+					console.log("SELF PROD",self.products);
 					$state.go('admin.dash');
 					// do a force reload here when going back to admin.dash
-					console.log("RES DATA", res.data.product)
+					.then(function(){
+						$state.reload();
+					})
 				}
-			})
-			console.log("SELF PROD",self.products)
+				},function(err){
+					console.log(err)})
+			
 		}
 
 		function updateProduct(product,productId){
@@ -96,7 +102,11 @@
 				if(res.status === 200){
 					//product was updated successfully
 					self.updateProductList(product,productId);
-					
+					console.log("product update")
+					$state.go('admin.dash')
+					.then(function(){
+						$state.reload();
+					})
 				}
 			})
 		}
@@ -108,8 +118,10 @@
 				if(res.status === 200){
 					//product was deleted successfully
 					self.removeProduct(productId);
-					state.go('admin.dash');
-					
+					$state.go('admin.dash')
+					.then(function(){
+						$state.reload();
+					})
 				}
 			})
 		}

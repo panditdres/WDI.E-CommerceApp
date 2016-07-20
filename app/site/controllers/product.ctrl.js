@@ -8,8 +8,8 @@
 		var productVm = this;
 
 		productVm.categories = [
-			{label:'Eyeglasses',value:'eyeglasses'},
-			{label:'Sunglasses',value:'sunglasses'},
+			{label:'Eye Glasses',value:'Eye Glasses'},
+			{label:'Sun Glasses',value:'Sun Glasses'},
 		];
 		productVm.product = {};
 		productVm.product_update_btn = 'Update Product';
@@ -20,8 +20,20 @@
 			.then(function(res){
 				console.log(res);
 				productVm.product = res.data.product;
+
+				productVm.name 			= productVm.product.name;
+				productVm.image 		= productVm.product.image;
+				productVm.description 	= productVm.product.description;
+				productVm.category 		= productVm.product.category;
+				productVm.price 		= productVm.product.price;
+				productVm.quantity		= productVm.product.quantity;
+				productVm.ID    		= productVm.product.id;
+
+
+				console.log(productVm.ID)
 				//TODO #2 set category based on edit form based on 
 				//product category
+				console.log(productVm.product);
 				for(var index in productVm.categories){
 					if(productVm.product.category == productVm.categories[index].value){
 						productVm.set_category = productVm.categories[index].value;
@@ -49,16 +61,16 @@
 				quantity: productVm.quantity,
 				//status:
 			}
-			console.log("Product added");
-			console.log(glasses)
+			// console.log("Product added");
+			// console.log(glasses)
 			productSrv.addProduct(glasses);
 		}
 
-		function updateProduct(product, productId){
+		function updateProduct(productId){
 			//TODO #2
 			//create product object, pass to product service
 			//Update text in button
-			api.request('/products/' + productId, 'GET')
+			
 			var updateGlasses = {
 				name: productVm.name,
 				image: productVm.image,
@@ -67,8 +79,8 @@
 				price: productVm.price,
 				quantity: productVm.quantity,
 			}
-
-			productSrv.updateProduct(product, productId);
+			console.log("UPDATE",updateGlasses)
+			productSrv.updateProduct(updateGlasses, productId);
 		}
 
 		function deleteProduct(productId){
