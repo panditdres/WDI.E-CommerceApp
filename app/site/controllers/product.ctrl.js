@@ -52,10 +52,18 @@
 			//TODO #2
 			//create product object, pass to product service
 			//Update text in button
+
+			var description = {
+					collection: productVm.collection,
+					details: productVm.details
+				}
+
+			var stringifiedDesc = JSON.stringify(description)
+
 			var glasses = {
 				name: productVm.name,
 				image: productVm.image,
-				description: productVm.description,
+				description: stringifiedDesc,
 				category: productVm.category,
 				price: productVm.price,
 				quantity: productVm.quantity,
@@ -70,11 +78,18 @@
 			//TODO #2
 			//create product object, pass to product service
 			//Update text in button
+
+			var description = {
+					collection: productVm.collection,
+					details: productVm.details
+				}
+
+			var stringifiedDesc = JSON.stringify(description)
 			
 			var updateGlasses = {
 				name: productVm.name,
 				image: productVm.image,
-				description: productVm.description,
+				description: stringifiedDesc, 
 				category: productVm.category,
 				price: productVm.price,
 				quantity: productVm.quantity,

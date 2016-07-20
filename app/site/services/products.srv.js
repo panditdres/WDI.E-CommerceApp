@@ -25,6 +25,14 @@
 				console.log(res);
 				self.products = res.data.products;
 
+				for (var i=0; i< self.products.length; i++) {
+					self.products[i].description = JSON.parse(self.products[i].description);
+					// console.log(JSON.parse(self.products[i].description))
+				}
+
+				// console.log("AFTER",self.products);
+
+
 				// if(self.products.length == 0) {
 				// 	self.products.push({
 				// 		name: 'Micro',
