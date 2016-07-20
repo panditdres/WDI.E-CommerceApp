@@ -44,7 +44,6 @@
 			.state('shop.about', {
 				url:'/about',
 				templateUrl:'site/partials/about.html',
-				controller:'AboutCtrl as ctrl'
 			})
 
 			.state('shop.checkout',{

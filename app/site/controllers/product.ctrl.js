@@ -44,7 +44,7 @@
 		}
 
 		//public functions
-		productVm.addProduct = addProduct;
+		productVm.addProduct    = addProduct;
 		productVm.updateProduct = updateProduct;
 		productVm.deleteProduct = deleteProduct;
 

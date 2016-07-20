@@ -25,45 +25,45 @@
 				console.log(res);
 				self.products = res.data.products;
 
-				if(self.products.length == 0) {
-					self.products.push({
-						name: 'Micro',
-						image: 'https://i.s-jcrew.com/is/image/jcrew/35526_EF2368?$pdp_fs418$',
-						description: 'hello',
-						category: 'sunglasses',
-						price: '$40',
-						quantity: '1',
-						status:'avaiable'
-						})
-					self.products.push({
-						name: 'Doc',
-						image: 'http://www.opumo.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/h/a/han-kjobenhavn-timeless-black-clip-on-sunglasses.jpg',
-						description: 'hello',
-						category: 'sunglasses',
-						price: '$40',
-						quantity: '1',
-						status:'avaiable'
-						})
-					self.products.push({
-						name: 'State',
-						image: 'https://cdn.shopify.com/s/files/1/0491/9773/products/Sunglasses-April8-SS16-04-01_1024x1024.jpg?v=1460134232',
-						description: 'hello',
-						category: 'sunglasses',
-						price: '$40',
-						quantity: '1',
-						status:'avaiable'
-						})
-					self.products.push({
-						name: 'Snow',
-						image: 'http://www.opumo.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/h/a/han_kjobenhavn_amber_doc_sunglasses1.jpg',
-						description: 'hello',
-						category: 'sunglasses',
-						price: '$40',
-						quantity: '1',
-						status:'avaiable'
-						})
-				}
-				console.log(self.products)
+				// if(self.products.length == 0) {
+				// 	self.products.push({
+				// 		name: 'Micro',
+				// 		image: 'https://i.s-jcrew.com/is/image/jcrew/35526_EF2368?$pdp_fs418$',
+				// 		description: 'hello',
+				// 		category: 'sunglasses',
+				// 		price: '$40',
+				// 		quantity: '1',
+				// 		status:'avaiable'
+				// 		})
+				// 	self.products.push({
+				// 		name: 'Doc',
+				// 		image: 'http://www.opumo.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/h/a/han-kjobenhavn-timeless-black-clip-on-sunglasses.jpg',
+				// 		description: 'hello',
+				// 		category: 'sunglasses',
+				// 		price: '$40',
+				// 		quantity: '1',
+				// 		status:'avaiable'
+				// 		})
+				// 	self.products.push({
+				// 		name: 'State',
+				// 		image: 'https://cdn.shopify.com/s/files/1/0491/9773/products/Sunglasses-April8-SS16-04-01_1024x1024.jpg?v=1460134232',
+				// 		description: 'hello',
+				// 		category: 'sunglasses',
+				// 		price: '$40',
+				// 		quantity: '1',
+				// 		status:'avaiable'
+				// 		})
+				// 	self.products.push({
+				// 		name: 'Snow',
+				// 		image: 'http://www.opumo.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/h/a/han_kjobenhavn_amber_doc_sunglasses1.jpg',
+				// 		description: 'hello',
+				// 		category: 'sunglasses',
+				// 		price: '$40',
+				// 		quantity: '1',
+				// 		status:'avaiable'
+				// 		})
+				// }
+				// console.log(self.products)
 
 				return self.products;
 				// return res.data.products;
@@ -84,7 +84,7 @@
 					self.products.push(res.data.product);
 					console.log("RES DATA", res.data.product);
 					console.log("SELF PROD",self.products);
-					$state.go('admin.dash');
+					$state.go('admin.dash')
 					// do a force reload here when going back to admin.dash
 					.then(function(){
 						$state.reload();
