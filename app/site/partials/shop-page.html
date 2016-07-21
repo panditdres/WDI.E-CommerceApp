@@ -52,7 +52,10 @@
 			<!-- collection section  -->
 
     		<div class="col-md-10">
-                <div class="col-md-4" ng-repeat="item in ctrl.products | filter: ctrl.selectFilter" 
+    		
+    		<select class="form-control" ng-options="option as option.label for option in ctrl.sortOptions" ng-model="ctrl.selected">
+     		 </select>
+                <div class="col-md-4" ng-repeat="item in ctrl.products | filter: ctrl.selectFilter | orderBy: ctrl.selected.sortField : ctrl.selected.reverse" 
                 ng-click="ctrl.goToProductPage(item.id)">
                 	<div class= "boxcolor">
                 		<img class=" boxback collection-products overlay" ng-src="{{item.image}}">
