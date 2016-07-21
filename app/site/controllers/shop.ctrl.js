@@ -47,30 +47,27 @@
 
 		shopVm.selectFilter = selectFilter;
 		shopVm.showAll = true;
-		// shopVm.sunCheck = true;
-		// shopVm.eyeCheck = true;
+		shopVm.sunCheck = true;
+		shopVm.eyeCheck = true;
 		shopVm.filterCheck = 'all';
 
 		function selectFilter(item) {
 			console.log(item);
-				if (shopVm.filterCheck == 'sunglasses') {
-					if (item.category == "Sun Glasses") {
+				if (shopVm.showAll == true) {
+						return true
+					}
+				// else if (shopVm.sunCheck == true || shopVm.eyeCheck == true) {
+				else if (item.category == "Sun Glasses" && shopVm.sunCheck == true) {
 						console.log('sunglass');
 						return true
 					}
-				} else if (shopVm.filterCheck == 'eyeglasses') {
-					if (item.category == "Eye Glasses") {
+				// } else if (shopVm.eyeCheck == true) {
+				else if (item.category == "Eye Glasses" && shopVm.eyeCheck == true) {
 						console.log('eyeglass')
 						return true
-					}
-				} else if (shopVm.filterCheck == 'all') {
-					if (item.category == "Eye Glasses" || item.category == "Sun Glasses") {
-						console.log('eyeglass')
-						return true
-					}
-				}
-				else {
-					console.log('none')
+					
+				} else {
+					console.log('none') //nothing will show up on page
 					return false
 				}
 
@@ -102,10 +99,10 @@
 
 		 //Sort options by price
 
-		 shopVm.sortOptions = [
-		    {label: 'Low to High', sortField: 'Price', reverse: true},
-		    {label: 'High to Low', sortField: 'Price', reverse: false}
-		]
+		shopVm.sortOptions = [
+		    {label: 'Low to High', sortField: 'price', reverse: false},
+		    {label: 'High to Low', sortField: 'price', reverse: true}
+		];
 
 		shopVm.selected = shopVm.sortOptions[0];
 

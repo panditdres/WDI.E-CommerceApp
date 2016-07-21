@@ -43,15 +43,15 @@
 					<form action="demo_form.asp" method="get">
 
 						<div class="forms" ng-click="ctrl.check()"> 
-						  <input type="checkbox" name="eyewear" ng-click="ctrl.filterCheck='eyeglasses'" value="Eyewear"> Eyewear
+						  <input type="checkbox" name="eyewear" ng-model="ctrl.eyeCheck" value="Eyewear"> Eyewear
 						</div>
 
 						<div class="forms" ng-click="ctrl.check()"> 
-						  <input type="checkbox" name="sunglasses" ng-click="ctrl.filterCheck='sunglasses'" value="Sun Glasses" > Sunglasses 
+						  <input type="checkbox" name="sunglasses" ng-model="ctrl.sunCheck" value="Sun Glasses" > Sunglasses 
 						</div>
 
 						<div class="forms" ng-click="ctrl.check()"> 
-						  <input type="checkbox" name="show all" ng-click="ctrl.filterCheck='all'" value="Show All" checked="checked"> Show All 
+						  <input type="checkbox" name="show all" ng-model="ctrl.showAll" value="Show All" checked="checked"> Show All 
 						</div>
 
 					</form>
@@ -59,7 +59,7 @@
 			</div>
 			<!-- COLLECTION-->
       		<div class="col-md-10">
-                <div class="col-md-4" ng-repeat="item in ctrl.products | filter: ctrl.selectFilter | filter: ctrl.selectedCollection | orderBy: 'Price' : ctrl.selected.reverse " ng-click="ctrl.goToProductPage(item.id)">
+                <div class="col-md-4" ng-repeat="item in ctrl.products | filter: ctrl.selectFilter | filter: ctrl.selectedCollection | orderBy: ctrl.selected.sortField : ctrl.selected.reverse " ng-click="ctrl.goToProductPage(item.id)">
                 	<div class="boxcolor">
                 		<img class="collection-products" ng-src="{{item.image}}">
                 		
