@@ -46,74 +46,73 @@
 		// }
 
 		shopVm.selectFilter = selectFilter;
+		shopVm.showAll = true;
 		shopVm.sunCheck = true;
 		shopVm.eyeCheck = true;
+		shopVm.filterCheck = 'all';
 
 		function selectFilter(item) {
 			console.log(item);
-				if (shopVm.sunCheck == true) {
-					if (item.category == "Sun Glasses") {
+				if (shopVm.showAll == true) {
+						return true
+					}
+				// else if (shopVm.sunCheck == true || shopVm.eyeCheck == true) {
+				else if (item.category == "Sun Glasses" && shopVm.sunCheck == true) {
 						console.log('sunglass');
 						return true
 					}
-				} else if (shopVm.eyeCheck == true) {
-					if (item.category == "Eye Glasses") {
+				// } else if (shopVm.eyeCheck == true) {
+				else if (item.category == "Eye Glasses" && shopVm.eyeCheck == true) {
 						console.log('eyeglass')
 						return true
-					}
+					
 				} else {
-					console.log('none')
+					console.log('none') //nothing will show up on page
 					return false
 				}
 
 		 }
 
-		 shopVm.CollectionFilter = CollectionFilter;
+		 shopVm.CollectionSelect = CollectionSelect;
+
 			
-			function CollectionFilter(item) {
-				console.log(item);
-					if (shopVm.DocCheck == true) {
-						if (item.description.collection == "Doc") {
-							console.log('Doc');
-							return true
-						}
-					} else if (shopVm.MicroCheck == true) {
-						if (item.description.collection == "Micro") {
-							console.log('Micro')
-							return true
-						}
-					} else if (shopVm.StateCheck == true) {
-						if (item.description.collection == "State") {
-							console.log('State')
-							return true
-						}
+			function CollectionSelect(item) {
+				shopVm.selectedCollection = item;
+				console.log(shopVm.selectedCollection)
+					// 	if (item.description.collection == "Doc") {
+					// 		return description.collection;
+					// 		console.log('Doc');
+					// } else if (item.description.collection == "Micro") {
+					// 		return description.collection;
+					// 		console.log('Micro')
+						
+					// } else if (item.description.collection == "State") {
+					// 		return description.collection;
+					// 		console.log('State')
+						
+					// } else if (item.description.collection == "Snow") {
+					// 		return description.collection;
+					// 		console.log('Snow')
 
-					} else if (shopVm.SnowCheck == true) {
-						if (item.description.collection == "Snow") {
-							console.log('Snow')
-							return true
-						}	
-
-					} else {
-						console.log('none')
-						return false
-					}
+					// } else {
+					// 	console.log('none')
+					// }
 		 }
 
 		 //Sort options by price
 
-		 shopVm.sortOptions = [
-		    {label: 'Low to High', sortField: 'Price', reverse: false},
-		    {label: 'High to Low', sortField: 'Price', reverse: true}
-		]
+		shopVm.sortOptions = [
+		    {label: 'Low to High', sortField: 'price', reverse: false},
+		    {label: 'High to Low', sortField: 'price', reverse: true}
+		];
 
+		shopVm.selected = shopVm.sortOptions[0];
+
+	}
 
 			shopVm.selected = shopVm.sortOptions[0];
 	}
 
-		 
-
-		
 
 })();
 
