@@ -36,7 +36,7 @@
 					<form action="demo_form.asp" method="get">
 
 						<div class="forms"> 
-						  <input type="checkbox" name="eyewear" value="Eyewear"> Eyewear
+						  <input type="checkbox" name="eyewear" value="Eyewear" ng-model="ctrl.eyeCheck"> Eyewear
 						</div>
 
 						<div class="forms" ng-click="ctrl.check()"> 
@@ -49,13 +49,40 @@
 			</div>
 			<!-- collection section  -->
     		<div class="col-md-10">
-                <div class="col-md-4 product_buffer" ng-repeat="products in ctrl.products | filter: ctrl.selectFilter(products)" 
-
-
-                ng-click="ctrl.goToProductPage(products.id)">
-                <img class="product_resize" ng-src="{{products.image}}">
+                <div class="col-md-4" ng-repeat="item in ctrl.products | filter: ctrl.selectFilter" 
+                ng-click="ctrl.goToProductPage(item.id)">
+                	<div class= "boxcolor">
+                		<img class=" boxback collection-products overlay" ng-src="{{item.image}}">
+                		<div class="item-details
+                		textoverlay boxcolor">
+                		{{item.name}}
+                		</div>
+                	</div>
+                </div>
             </div>
 
+           <!--  <div class="col-md-10">
+                <div class="col-md-4" ng-repeat="item in ctrl.products | filter: ctrl.selectFilter" 
+                ng-click="ctrl.goToProductPage(item.id)">
+                	<div class="">
+                		<img class="collection-products" ng-src="{{item.image}}">
+                		
+                		<div class="overlay"> 
+                			<span class="item-details">{{item.name}} </span>
+                		</div>
+                	</div>
+                </div>
+            </div> -->
+
+      <!--  <div class="co-logo">
+            <img src="http://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg" class="img" alt="" />
+            Hover Text
+            <div class="textoverlay fancy">
+              <div>Cat &mdash; Sandwich</div>
+            </div>
+        </div> -->
+
+                		
 
 
           

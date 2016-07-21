@@ -11,7 +11,7 @@
 		shopVm.products = products;
 		// shopVm.getProducts = productSrv.getProduct();
 		
-		// console.log("SHOP VM PRODUCTS",shopVm.products.category)
+		console.log("SHOP VM PRODUCTS",shopVm.products)
 
 		//watch for any changes to model data
 		$scope.$watch(function(){
@@ -40,15 +40,15 @@
 
 		shopVm.selectFilter = selectFilter; 
 		
-		function selectFilter(products) {
-			console.log(products);
+		function selectFilter(item) {
+			console.log(item);
 				if (shopVm.sunCheck == true) {
-					if (products.category == "Sun Glasses") {
+					if (item.category == "Sun Glasses") {
 						console.log('sunglass');
 						return true
 					}
 				} else if (shopVm.eyeCheck == true) {
-					if (products.category == "Eye Glasses") {
+					if (item.category == "Eye Glasses") {
 						console.log('eyeglass')
 						return true
 					}
