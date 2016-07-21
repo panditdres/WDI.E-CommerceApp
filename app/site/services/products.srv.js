@@ -176,10 +176,7 @@
 				item: product,
 				amount: quantity
 			}	
-<<<<<<< HEAD
-				
-=======
->>>>>>> origin/master
+
 			self.cart.push(cartItem);				
 				
 			console.log("TEST");

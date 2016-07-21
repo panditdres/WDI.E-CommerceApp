@@ -8,29 +8,28 @@
 			<!-- SIDE BAR -->
 			<div class="col-lg-2 col-md-2"> 
 				<div class="row">  
-					<div class="col-lg-6 col-md-6 centered-text">
+					<div ng-click="ctrl.CollectionSelect('doc')" class="col-lg-6 col-md-6 centered-text">
 
-						<div class="forms" ng-click="ctrl.check()"> 
-						  <input type="checkbox" name="sunglasses" ng-model="ctrl.sunCheck" value="Sun Glasses" checked="checked"> Sunglasses 
-						  </div>
+						<!-- <div ng-click="ctrl.CollectionFilter()"> 
+						  </div> -->
 
 						<img class="images" src="../../assets/img/Glass_icons/Doc.png">
 						<p class="cat-names"> doc </p>
 					</div>
 						
-					<div class="col-lg-6 col-md-6 centered-text">
+					<div ng-click="ctrl.CollectionSelect('micro')" class="col-lg-6 col-md-6 centered-text">
 						<img class="images" src="../../assets/img/Glass_icons/Micro.png">
 						<p class="cat-names"> micro </p>
 					</div>
 				</div>
 				
 				<div class="row"> 
-					<div class="col-lg-6 col-md-6 centered-text">
+					<div ng-click="ctrl.CollectionSelect('state')" class="col-lg-6 col-md-6 centered-text">
 						<img class="images" src="../../assets/img/Glass_icons/State.png">
 						<p> state </p>
 					</div>
 					
-					<div class="col-lg-6 col-md-6 centered-text">
+					<div ng-click="ctrl.CollectionSelect('snow')" class="col-lg-6 col-md-6 centered-text">
 						<img class="images" src="../../assets/img/Glass_icons/Snow.png">
 						<p> snow </p>
 					</div>		    		
@@ -43,13 +42,16 @@
 	            <div class="radio-buttons">
 					<form action="demo_form.asp" method="get">
 
-						<div class="forms"> 
-
-						  <input type="checkbox" name="eyewear" ng-model="ctrl.eyeCheck" value="Eyewear"> Eyewear
+						<div class="forms" ng-click="ctrl.check()"> 
+						  <input type="checkbox" name="eyewear" ng-click="ctrl.filterCheck='eyeglasses'" value="Eyewear"> Eyewear
 						</div>
 
 						<div class="forms" ng-click="ctrl.check()"> 
-						  <input type="checkbox" name="sunglasses" ng-model="ctrl.sunCheck" value="Sun Glasses" checked="checked"> Sunglasses 
+						  <input type="checkbox" name="sunglasses" ng-click="ctrl.filterCheck='sunglasses'" value="Sun Glasses" > Sunglasses 
+						</div>
+
+						<div class="forms" ng-click="ctrl.check()"> 
+						  <input type="checkbox" name="show all" ng-click="ctrl.filterCheck='all'" value="Show All" checked="checked"> Show All 
 						</div>
 
 					</form>
@@ -57,8 +59,7 @@
 			</div>
 			<!-- COLLECTION-->
       		<div class="col-md-10">
-                <div class="col-md-4" ng-repeat="item in ctrl.products | filter: ctrl.selectFilter" 
-                ng-click="ctrl.goToProductPage(item.id)">
+                <div class="col-md-4" ng-repeat="item in ctrl.products | filter: ctrl.selectFilter | filter: ctrl.selectedCollection | orderBy: 'Price' : ctrl.selected.reverse " ng-click="ctrl.goToProductPage(item.id)">
                 	<div class="boxcolor">
                 		<img class="collection-products" ng-src="{{item.image}}">
                 		
