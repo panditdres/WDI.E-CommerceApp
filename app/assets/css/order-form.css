@@ -1,6 +1,6 @@
 #yourdetails {
 
-	text-decoration: underline;
+
 	font-size: 15px;
 }
 
@@ -14,6 +14,14 @@
 
 #submit-button {
 	float: right;
-	margin-top: 2%;
+	margin-top: 30px;
 
+}
+
+#formtwo {
+	margin-top:30px;
+}
+
+#formthree {
+	margin-top:30px;
 }

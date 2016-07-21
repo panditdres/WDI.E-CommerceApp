@@ -2,21 +2,24 @@
 
 
   <div id="checkout" class="checkout-container">
+
     	<h1 id="checkouthead"> you have {{ctrl.amount}} items in your cart: {{ctrl.subtotal | currency}}
   	</h1>
+
     	
-    	<button id="checkout-button" type="button" class="btn btn-primary btn-lg" ui-sref="shop.order">Check Out</button>
+    	<button id="checkout-button" type="button" class="btn btn-primary btn-lg button4 button" ui-sref="shop.order">Check Out</button>
 
   </div>
+<hr></hr>
 
   <div id="checkouttable">
     <table class="table">
       <thead>
         <tr>
-          <th>Quantity</th>
+          <th id="tablefont">Quantity</th>
           <th></th>
-          <th>Item</th>
-          <th>Price</th>
+          <th id="tablefont">Item</th>
+          <th id="tablefont">Price</th>
         </tr>
       </thead>
       <tbody>
@@ -38,8 +41,5 @@
   </div>
  
     
-  	
- 
-  </div>
 
 </div>
