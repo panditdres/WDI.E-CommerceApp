@@ -51,6 +51,10 @@
 	display: block;
 }
 
+.form-control {
+	WIDTH: 30;
+
+}
 
 /*SIDE BAR*/
 

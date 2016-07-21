@@ -12,6 +12,16 @@ font-family: Ubuntu;
 font-weight: 400;
 }
 
+h1:hover {
+ 	color: #91adc9;
+ 	cursor: pointer;
+}
+
+ul {
+
+	list-style: none;
+}
+
 h1 {
 font-weight: 300;
 letter-spacing: 2px
@@ -31,6 +41,13 @@ p.company {
 
 }
 
+
+/*NG FUNCTION COURSERS*/
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+}
 
 /*NAV BAR*/
 
@@ -54,7 +71,6 @@ p.company {
 }
 
 .nav-display > li {
-	padding-top: 5%;
 	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -62,16 +78,23 @@ p.company {
 	box-shadow: none;
 }
 
+
 .login-padding {
 	padding-left: 5%;
 }
 
 .nav-display {
 	display: inline;
-	}
+	min-width: 10px;
+}
 
 .nav-items {
 	padding-right:3%;
+	cursor: pointer;
+}
+
+.nav-items:hover  {
+	color: #91adc9;
 }
 
 .nav-float {

@@ -28,17 +28,57 @@
 	border-bottom: 1px dashed rgba(255, 255, 255, .5);
 	position: absolute;
 	bottom: 10%;
-	left: 50%;
-	
+	left: 45%;
 	padding: 2%;
 	display: inline-block;
 }
 
-/*INDIVIDUAL PAGES*/
+.cat-box:hover .cat-overlay {
+	opacity: .5;
+	background-color: black;
+}
+
+.cat-overlay {
+	position: absolute;
+	/*position: relative;*/
+	top: 3px;
+	left: 5px;
+	right: 5px;
+	height: 97%;
+	width: 97%;
+    opacity:0;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.5);
+	-webkit-transition: opacity .25s ease;
+	-moz-transition: opacity .25s ease;
+}
+
+/*INDIVIDUAL CATEGORIES*/
+
 .doc-img {
 	height: 100%;
+	background-size: cover;
 	background-image: url("../img/glasses.img/shoppingmain/category-doc.jpg");
 }
+
+.micro-img {
+	height: 100%;
+	background-size: cover;
+	background-image: url("../img/glasses.img/shoppingmain/category-micro.jpg");
+}
+
+.state-img {
+	height: 100%;
+	background-size: cover;
+	background-image: url("../img/glasses.img/shoppingmain/category-state.jpg");
+}
+
+.snow-img {
+	height: 100%;
+	background-size: cover;
+	background-image: url("../img/glasses.img/shoppingmain/category-snow.jpg");
+}
+
 .doc-img > .pic-img {
 	width: 100%;
 	overflow: hidden;
