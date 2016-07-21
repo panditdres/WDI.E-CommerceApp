@@ -29,7 +29,7 @@
 
 				for (var i=0; i< self.products.length; i++) {
 					console.log(self.products[i].description);
-					// self.products[i].description = JSON.parse(self.products[i].description);
+					self.products[i].description = JSON.parse(self.products[i].description);
 					// console.log(JSON.parse(self.products[i].description))
 				}
 
@@ -169,7 +169,7 @@
 				item: product,
 				amount: quantity
 			}	
-				self.cart.push(cartItem);				
+			self.cart.push(cartItem);				
 				
 			console.log("TEST");
 			console.log(self.cart);

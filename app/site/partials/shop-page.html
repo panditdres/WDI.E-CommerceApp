@@ -8,7 +8,7 @@
 			<!-- side section -->
 			<div class="col-lg-2 col-md-2"> 
 				<div class="row">  
-					<div class="col-lg-6 col-md-6 centered-text">
+					<div class="col-lg-6 col-md-6 centered-text" ng-click="">
 						<img class="images" src="../../assets/img/Glass_icons/Doc.png">
 						<p class="cat-names"> doc </p>
 					</div>
@@ -28,7 +28,10 @@
 					<div class="col-lg-6 col-md-6 centered-text">
 						<img class="images" src="../../assets/img/Glass_icons/Snow.png">
 						<p> snow </p>
-					</div>	
+					</div>		    		
+    		
+	    			<select class="form-control" ng-options="option as option.label for option in ctrl.sortOptions" ng-model="ctrl.selected">
+	     		 	</select>
 				</div>
 
 				  <!-- radio buttons  -->
@@ -52,9 +55,6 @@
 			<!-- collection section  -->
 
     		<div class="col-md-10">
-    		
-    		<select class="form-control" ng-options="option as option.label for option in ctrl.sortOptions" ng-model="ctrl.selected">
-     		 </select>
                 <div class="col-md-4" ng-repeat="item in ctrl.products | filter: ctrl.selectFilter | orderBy: ctrl.selected.sortField : ctrl.selected.reverse" 
                 ng-click="ctrl.goToProductPage(item.id)">
                 	<div class= "boxcolor">

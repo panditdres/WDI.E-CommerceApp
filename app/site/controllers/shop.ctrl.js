@@ -69,8 +69,6 @@
 
 			shopVm.selected = shopVm.sortOptions[0];
 
-		
-
 }})();
 
 
