@@ -6,26 +6,26 @@
 		<div class="row">
 
 			<!-- side section -->
-			<div class="col-md-2"> 
+			<div class="col-lg-2 col-md-2"> 
 				<div class="row">  
-					<div class="col-md-6 centered-text">
+					<div class="col-lg-6 col-md-6 centered-text">
 						<img class="images" src="../../assets/img/Glass_icons/Doc.png">
 						<p class="cat-names"> doc </p>
 					</div>
 						
-					<div class="col-md-6 centered-text">
+					<div class="col-lg-6 col-md-6 centered-text">
 						<img class="images" src="../../assets/img/Glass_icons/Micro.png">
 						<p class="cat-names"> micro </p>
 					</div>
 				</div>
 				
 				<div class="row"> 
-					<div class="col-md-6 centered-text">
+					<div class="col-lg-6 col-md-6 centered-text">
 						<img class="images" src="../../assets/img/Glass_icons/State.png">
 						<p> state </p>
 					</div>
 					
-					<div class="col-md-6 centered-text">
+					<div class="col-lg-6 col-md-6 centered-text">
 						<img class="images" src="../../assets/img/Glass_icons/Snow.png">
 						<p> snow </p>
 					</div>	
@@ -36,7 +36,9 @@
 					<form action="demo_form.asp" method="get">
 
 						<div class="forms"> 
-						  <input type="checkbox" name="eyewear" value="Eyewear" ng-model="ctrl.eyeCheck"> Eyewear
+
+						  <input type="checkbox" name="eyewear" ng-model="ctrl.eyeCheck" value="Eyewear"> Eyewear
+
 						</div>
 
 						<div class="forms" ng-click="ctrl.check()"> 
@@ -48,6 +50,7 @@
 
 			</div>
 			<!-- collection section  -->
+
     		<div class="col-md-10">
                 <div class="col-md-4" ng-repeat="item in ctrl.products | filter: ctrl.selectFilter" 
                 ng-click="ctrl.goToProductPage(item.id)">
@@ -79,6 +82,14 @@
             Hover Text
             <div class="textoverlay fancy">
               <div>Cat &mdash; Sandwich</div>
+
+    		<div class="col-lg-10 col-md-10">
+                <div class="col-lg-4 col-md-4 product_buffer" 
+                ng-repeat="products in ctrl.products | filter: ctrl.selectFilter" 
+                ng-click="ctrl.goToProductPage(products.id)">
+                	<img class="product_resize" ng-src="{{products.image}}">
+                </div>
+
             </div>
         </div> -->
 

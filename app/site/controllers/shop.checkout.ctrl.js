@@ -20,10 +20,10 @@
 		}, function (newValue) {
 		    shopVm.products = productSrv.products;
 		});
-
+		
 		// function getItemAmount(){
 		// 	for(var i=0; i<shopVm.cart.length; i++) {
-		// 		var amount = shopVm.cart[i].amount;
+		// 		amount += shopVm.cart[i].amount;
 		// 	}
 		// 	return amount;
 		// 	console.log(amount)
