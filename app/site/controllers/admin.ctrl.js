@@ -29,6 +29,16 @@
 			}
 		});
 
+		// //watch for updates to orders object
+		// $scope.$watch(function(){
+	 //    	return productSrv.orders;
+		// }, function (newValue) {
+		// 	if(productSrv.orders.length > 0){
+		// 	    adminVm.orders = productSrv.orders;
+		// 	    adminVm.is_orders = true;
+		// 	}
+		// });
+
 		//public functions
 		adminVm.editProduct = editProduct;
 		adminVm.logout = logout;

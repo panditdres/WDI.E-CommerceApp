@@ -24,6 +24,7 @@
 				//TODO #3 resolve products before main page load
 				resolve:{
 					products: function(productSrv){
+						console.log('resolving main')
 						return productSrv.getProducts();
 					}
 				}
@@ -107,6 +108,12 @@
 				controller:'ProductCtrl as ctrl',
 				templateUrl:'site/partials/admin-edit-product.html',
 			})
+
+			// .state('admin.active_orders', {
+			// 	url:'/active_orders',
+			// 	templateUrl:'site/partials/admin-active-order.html',
+			// 	controller:'AdminCtrl as ctrl'
+			// })
 
 			.state('auth',{
 				url:'/auth',

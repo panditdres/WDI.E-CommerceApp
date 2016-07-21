@@ -2,7 +2,7 @@
 
 
   <div id="checkout" class="checkout-container">
-    	<h1 id="checkouthead"> you have x items in your cart: $x
+    	<h1 id="checkouthead"> you have {{ctrl.amount}} items in your cart: {{ctrl.subtotal | currency}}
   	</h1>
     	
     	<button id="checkout-button" type="button" class="btn btn-primary btn-lg" ui-sref="shop.order">Check Out</button>
@@ -25,14 +25,21 @@
           <td><img ng-src="{{items.item.image}}"></td>
           <td>{{items.item.name}} - {{items.item.category}} </td>
           <td>${{items.item.price}}</td>
+          <td><button class="btn"><i class="fa fa-trash-o" aria-hidden="true" ng-click="ctrl.removeCart(items.item.id)"></i></button></td>
         </tr>
       </tbody>
     </table>
   </div>
-  
+
   <div id = "subtotal"> 
-  	SUBTOTAL: $y
+    <p>SubTotal: {{ctrl.subtotal | currency}}</p> 
+    <p>HST: {{ctrl.hst | currency}}</p>
+    <p>Total: {{ctrl.total | currency}}</p>
   </div>
+ 
+    
+  	
+ 
   </div>
 
 </div>

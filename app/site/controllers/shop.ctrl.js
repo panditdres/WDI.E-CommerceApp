@@ -33,12 +33,13 @@
 			$state.go('shop.productPage',{'productId':id});
 		}
 
-
 		shopVm.check = function() {
 			console.log(shopVm.sunCheck)
 		}
 
-		shopVm.selectFilter = selectFilter; 
+		shopVm.selectFilter = selectFilter;
+		shopVm.sunCheck = true;
+		shopVm.eyeCheck = true;
 		
 		function selectFilter(item) {
 			console.log(item);
@@ -56,11 +57,7 @@
 					console.log('none')
 					return false
 				}
-
-
 		 }
-
-
 	}
 
 		

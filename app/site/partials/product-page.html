@@ -12,7 +12,7 @@
 				<p>Price: ${{ctrl.product.data.product.price}} </p>
 				<div>
 					<label>Quantity</label>
-					<select ng-options="option.value as option.number for option in ctrl.quantities" ng-model="ctrl.quantity" name="quantity">
+					<select ng-options="option.value as option.number for option in ctrl.quantities" ng-model="ctrl.quantity" ng-init="ctrl.quantity = 1" name="quantity">
 					</select>
 				</div>
 				<button ng-click="ctrl.addCart(ctrl.product.data.product)"> ADD TO CART </button>

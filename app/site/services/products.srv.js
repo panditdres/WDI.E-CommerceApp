@@ -6,9 +6,12 @@
 
 	function ProductService($state,api){
 		var self = this;
+
+		console.log('loading service')
 		//public variables
-		self.products = [];
-		self.cart = [];
+		self.products 	= [];
+		self.cart 		= [];
+		self.orders 	= [];
 		//public functions
 		self.getProduct 		= getProduct;
 		self.getProducts 		= getProducts;
@@ -18,8 +21,10 @@
 		self.removeProduct 		= removeProduct;
 		self.deleteProduct 		= deleteProduct;
 		self.addCart 			= addCart;
-		self.removeCart 		= removeCart;
+		// self.calculate			= calculate;
+		// self.removeCart 		= removeCart;
 
+		console.log('test')
 		function getProducts(){
 			return api.request('/products',{},'GET')
 			.then(function(res){
@@ -85,6 +90,7 @@
 			})
 		}
 
+		console.log('addproduct in service')
 		function addProduct(product){
 			console.log(product);
 			api.request('/products',product,'POST')
@@ -101,8 +107,9 @@
 						$state.reload();
 					})
 				}
-				},function(err){
-					console.log(err)})
+			},function(err){
+				console.log(err)
+			})
 			
 		}
 
@@ -169,15 +176,44 @@
 				item: product,
 				amount: quantity
 			}	
-				self.cart.push(cartItem);				
+				
+			self.cart.push(cartItem);				
 				
 			console.log("TEST");
 			console.log(self.cart);
 			return self.cart;
 		}
 
-		function removeCart(product, productId) {
 
-		}
+
+		// function addOrder(product, quantiy) {
+
+		// }
+		console.log('end of service')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 })();

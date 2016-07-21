@@ -1,0 +1,26 @@
+<h3>Products</h3>
+
+<div ng-hide="ctrl.is_orders">
+	<p>
+		You have no active orders
+	</p>
+</div>
+
+<div ng-show="ctrl.is_orders">
+	<table class="products-list table">
+		<tr>
+			<th>Category</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr ng-repeat="order in ctrl.orders">
+			<td>{{product.category}}</td>
+			<td>{{product.name}}</td>
+			<td>{{product.price}}</td>
+			<td>{{product.quantity}}</td>
+			<td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
+		</tr>
+	</table>
+</div>
