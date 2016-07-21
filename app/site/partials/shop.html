@@ -22,7 +22,8 @@
     <div class="nav-display nav-float"> 
       <ul class="nav-display">
         <li class="nav-display nav-items login-padding" ui-sref="admin"> Login </li>
-        <li class="nav-display nav-items" ui-sref="shop.checkout"> Cart {{ctrl.cart.length}}</li>
+        <li class="nav-display nav-items last-item" ui-sref="shop.checkout"> Cart {{ctrl.getTotalAmount()}}</li>
+        <!-- <li class="nav-display nav-items" ui-sref="shop.checkout"> {{ctrl.cart.length}}</li> -->
       </ul>
     </div>
   </div> <!-- right nav  -->

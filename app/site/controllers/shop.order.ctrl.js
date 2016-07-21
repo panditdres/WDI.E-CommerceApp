@@ -3,11 +3,15 @@
 		.module('shopApp')
 		.controller('OrderFormCtrl',OrderFormCtrl)
 
-	function OrderFormCtrl($scope,productSrv,products,$uiModal){
+	function OrderFormCtrl($scope,productSrv,products,$state){
 		var shopVm = this;
 
 		//TODO #3 Capture resolved products for view
+		shopVm.addOrder = productSrv.addOrder;
+		shopVm.newOrder = productSrv.newOrder;
 		shopVm.products = products;
+		shopVm.submitOrder = submitOrder;
+		shopVm.thankYou = thankYou;
 		// console.log("SHOP VM PRODUCTS",shopVm.products.category)
 
 		//watch for any changes to model data
@@ -16,6 +20,28 @@
 		}, function (newValue) {
 		    shopVm.products = productSrv.products;
 		});
+
+		function submitOrder() {
+			console.log("submot order")
+			var OrderObject = {
+				firstname: shopVm.firstname,
+				lastname: shopVm.lastname,
+				phoneNum: shopVm.phoneNum,
+				email: shopVm.email,
+				address: shopVm.address,
+				creditcard: shopVm.creditcard,
+				cardname: shopVm.cardname
+			}
+			console.log("OrderObject", OrderObject)
+			console.log("New order",productSrv.newOrder)
+			productSrv.newOrder.buyerInfo = OrderObject;		
+			return OrderObject;	
+		}	
+
+		function thankYou() {
+			alert("Thank you for your order")
+				$state.go('shop.main');
+		}
 	
 	}
 

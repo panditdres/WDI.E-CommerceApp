@@ -14,7 +14,12 @@
 			.state('shop', {
 				url:'/shop',
 				templateUrl:'site/partials/shop.html', 
-				controller:'NavCtrl as ctrl'
+				controller:'NavCtrl as ctrl',
+				resolve:{
+					products: function(productSrv){
+						return productSrv.getProducts();
+					}
+				}
 			})
 
 			.state('shop.main',{
@@ -79,6 +84,17 @@
 				}
 			})
 
+			.state('shop.summary',{
+				url:'/summary',
+				templateUrl:'site/partials/summary.html',
+				controller:'SummaryCtrl as ctrl',
+				resolve:{
+					products: function(productSrv){
+						return productSrv.getProducts();
+					}
+				}
+			})
+
 			.state('admin',{
 				url:'/admin',
 				templateUrl:'site/partials/admin.html',
@@ -109,11 +125,11 @@
 				templateUrl:'site/partials/admin-edit-product.html',
 			})
 
-			// .state('admin.active_orders', {
-			// 	url:'/active_orders',
-			// 	templateUrl:'site/partials/admin-active-order.html',
-			// 	controller:'AdminCtrl as ctrl'
-			// })
+			.state('admin.active_orders', {
+				url:'/active_orders',
+				templateUrl:'site/partials/admin-active-order.html',
+				controller:'AdminCtrl as ctrl'
+			})
 
 			.state('auth',{
 				url:'/auth',

@@ -7,7 +7,12 @@
 
 	function AdminCtrl($scope,$state,productSrv){
 		var adminVm = this;
-		adminVm.productSrv = productSrv;
+		adminVm.addOrder = productSrv.addOrder;
+		adminVm.newOrder = productSrv.newOrder;
+		adminVm.orders 	= productSrv.orders;
+		adminVm.cart 	= productSrv.cart;
+		adminVm.randomOrderNum = productSrv.randomOrderNum;
+		adminVm.randomShipping = productSrv.randomShipping;
 
 		//check if logged in
 		if(localStorage.authToken == undefined || localStorage.authToken == null){
@@ -18,6 +23,7 @@
 		// if(adminVm.products.length > 0 ){
 		// 	adminVm.is_products = true;
 		// }
+		console.log(adminVm.orders);
 
 		//watch for updates to products object
 		$scope.$watch(function(){
@@ -28,16 +34,6 @@
 			    adminVm.is_products = true;
 			}
 		});
-
-		// //watch for updates to orders object
-		// $scope.$watch(function(){
-	 //    	return productSrv.orders;
-		// }, function (newValue) {
-		// 	if(productSrv.orders.length > 0){
-		// 	    adminVm.orders = productSrv.orders;
-		// 	    adminVm.is_orders = true;
-		// 	}
-		// });
 
 		//public functions
 		adminVm.editProduct = editProduct;

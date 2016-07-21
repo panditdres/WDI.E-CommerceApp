@@ -85,6 +85,7 @@ p.company {
 
 .nav-display {
 	display: inline;
+
 	min-width: 10px;
 }
 
@@ -95,11 +96,16 @@ p.company {
 
 .nav-items:hover  {
 	color: #91adc9;
-}
+	width: 140px;
+	}
 
+.last-item {
+	margin: 0;
+}
 .nav-float {
 	float: right;
 } 
+
 
 .cart-num { 
 	width: 15px;

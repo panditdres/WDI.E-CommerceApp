@@ -3,11 +3,11 @@
 
   <div id="checkout" class="checkout-container">
 
-    	<h1 id="checkouthead"> you have {{ctrl.amount}} items in your cart: {{ctrl.subtotal | currency}}
+    	<h1 id="checkouthead"> You have {{ctrl.getTotalAmount()}} items in your cart: {{ctrl.subtotal | currency}}
   	</h1>
 
     	
-    	<button id="checkout-button" type="button" class="btn btn-primary btn-lg button4 button" ui-sref="shop.order">Check Out</button>
+    	<button id="checkout-button" type="button" class="btn btn-primary btn-lg button4 button" ui-sref="shop.order" ng-click="ctrl.checkout()">Check Out</button>
 
   </div>
 <hr></hr>
@@ -38,6 +38,7 @@
     <p>SubTotal: {{ctrl.subtotal | currency}}</p> 
     <p>HST: {{ctrl.hst | currency}}</p>
     <p>Total: {{ctrl.total | currency}}</p>
+    <button ui-sref="shop.order" ng-click="ctrl.checkout()"> Check Out </button>
   </div>
  
     
