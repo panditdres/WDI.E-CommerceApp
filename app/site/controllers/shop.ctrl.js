@@ -38,7 +38,8 @@
 			console.log(shopVm.sunCheck)
 		}
 
-		shopVm.selectFilter = selectFilter; 
+		shopVm.selectFilter = selectFilter;
+		// shopVm.sortOptions = sortOptions;
 		
 		function selectFilter(item) {
 			console.log(item);
@@ -57,15 +58,20 @@
 					return false
 				}
 
-
 		 }
 
+		 //Sort options by price
 
-	}
+		 shopVm.sortOptions = [
+		    {label: 'Low to High', sortField: 'Price', reverse: false},
+		    {label: 'High to Low', sortField: 'Price', reverse: true}
+		]
+
+			shopVm.selected = shopVm.sortOptions[0];
 
 		
 
-})();
+}})();
 
 
 
