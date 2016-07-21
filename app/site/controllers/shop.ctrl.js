@@ -67,11 +67,8 @@
 				}
 
 		 }
-	}
 
-		 }
-
-		shopVm.CollectionFilter = CollectionFilter;
+		 shopVm.CollectionFilter = CollectionFilter;
 			
 			function CollectionFilter(item) {
 				console.log(item);
@@ -112,8 +109,13 @@
 
 
 			shopVm.selected = shopVm.sortOptions[0];
+	}
 
-}})();
+		 
+
+		
+
+})();
 
 
 

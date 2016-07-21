@@ -21,8 +21,16 @@
 		self.removeProduct 		= removeProduct;
 		self.deleteProduct 		= deleteProduct;
 		self.addCart 			= addCart;
-		// self.calculate			= calculate;
-		// self.removeCart 		= removeCart;
+		self.addOrder			= addOrder;
+		self.randomOrderNum 	= randomOrderNum;
+		self.randomShipping 	= randomShipping;
+
+
+		self.newOrder = {
+			buyerInfo: {},// form info
+			purchaseDetails: []//Cart
+		}
+
 
 		console.log('test')
 		function getProducts(){
@@ -107,6 +115,7 @@
 						$state.reload();
 					})
 				}
+				// localStorage.setItem("Storage", JSON.stringify(product));
 			},function(err){
 				console.log(err)
 			})
@@ -176,10 +185,7 @@
 				item: product,
 				amount: quantity
 			}	
-<<<<<<< HEAD
-				
-=======
->>>>>>> origin/master
+
 			self.cart.push(cartItem);				
 				
 			console.log("TEST");
@@ -187,15 +193,28 @@
 			return self.cart;
 		}
 
-
-
-		// function addOrder(product, quantiy) {
-
-		// }
+		function addOrder(newOrder) {
+			console.log("execute add Order")
+			self.orders.push(newOrder);
+			self.cart = [];
+			console.log("Order",self.orders)
+			return self.orders;		
+		}
 		console.log('end of service')
 
 
+		function randomOrderNum() {
+			return Math.floor(Math.random() * 100000000)  + 1;
+		}
 
+		function randomShipping() {
+			var r = 'ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvxyz0123456789';
+			var s = '';
+			for (var i = 0; i < 9; i++) {
+				s += r.charAt(Math.floor(Math.random()*r.length));
+			}
+			return s;
+		}
 
 
 

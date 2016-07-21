@@ -68,15 +68,19 @@ p.company {
 
 .nav-display {
 	display: inline;
+	width: 140px;
 	}
 
 .nav-items {
-	padding-right:3%;
+	margin-right:3%;
 }
-
+.last-item {
+	margin: 0;
+}
 .nav-float {
 	float: right;
 } 
+
 
 .cart-num { 
 	width: 15px;
