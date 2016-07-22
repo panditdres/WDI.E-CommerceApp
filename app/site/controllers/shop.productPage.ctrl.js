@@ -34,11 +34,11 @@
 		});
 
 		function addCart(product) {
-			productSrv.addCart(shopVm.product.data.product, shopVm.quantity){
-            toastr.success(text,"Wunderbar!" {{item.name}} "has been added to your cart");
+			productSrv.addCart(shopVm.product.data.product, shopVm.quantity);
+			// toastr.success('TESTING TESTING, Wunderbar!')
+        	// toaster["success"]('This item has been added to your cart!', 'Wunderbar!')
 		}
-
 	}
 
-}})();
+})();
 
