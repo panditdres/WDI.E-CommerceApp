@@ -30,7 +30,8 @@
 				email: shopVm.email,
 				address: shopVm.address,
 				creditcard: shopVm.creditcard,
-				cardname: shopVm.cardname
+				cardname: shopVm.cardname,
+				cvv: shopVm.cvv
 			}
 			console.log("OrderObject", OrderObject)
 			console.log("New order",productSrv.newOrder)

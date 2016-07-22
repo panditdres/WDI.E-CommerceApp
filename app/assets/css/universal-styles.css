@@ -101,11 +101,19 @@ p.company {
 
 .last-item {
 	margin: 0;
+	width: 200px;
+	margin-right: 30px;
 }
 .nav-float {
 	float: right;
 } 
 
+.nav-display.nav-float {
+	min-width: 150px;
+}
+.gap {
+	margin-bottom: 50px;
+}
 
 .cart-num { 
 	width: 15px;

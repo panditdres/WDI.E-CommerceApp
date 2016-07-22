@@ -10,17 +10,35 @@
 	<table class="products-list table">
 		<tr>
 			<th>Customer Details</th>
+			<th>Payment</th>
 			<th>Name</th>
-			<th>Price</th>
 			<th>Quantity</th>
 			<th>&nbsp;</th>
 		</tr>
-		<tr ng-repeat="order in ctrl.orders[0]">
-			<td>{{order}}</td>
-			<td>{{product.name}}</td>
-			<td>{{product.price}}</td>
-			<td>{{product.quantity}}</td>
-			<td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
+		<tr ng-repeat="order in ctrl.orders">
+			<td>
+				<p>Firstname: {{order.buyerInfo.firstname}}</p> 
+				<o>Lastname: {{order.buyerInfo.lastname}}</p>
+				<p>Shipping address: {{order.buyerInfo.address}}</p>
+				<p>Phone: {{order.buyerInfo.phoneNum}}</p>
+				<p>Email: {{order.buyerInfo.email}}</p>
+			</td>
+			<td>
+				<p>Payment - Card Name: {{order.buyerInfo.cardname}}</p>
+				<p>Payment - Card: {{order.buyerInfo.creditcard}}</p>
+				<p>Payment - CVV: {{order.buyerInfo.cvv}}</p>
+				<p>Order ID: {{ctrl.randomOrderNum}}</p>
+				<p>Ordered on: {{order.purchaseDetails[0][0].item.createdAt | date: medium}}</p>
+			</td>
+			<td>
+				<p>{{order.purchaseDetails[0][0].item.name}}</p>
+			</td>
+			<td>
+				<p>{{order.purchaseDetails[0][0].amount}}</p>
+			</td>
+			<td>
+				<a ng-click="ctrl.editProduct(product)">Order completed</a>
+			</td>
 		</tr>
 	</table>
 </div>
