@@ -12,6 +12,7 @@
 		shopVm.calculate = calculate;
 		shopVm.removeCart = removeCart;
 		shopVm.getTotalAmount = getTotalAmount;
+		shopVm.checkout = checkout;
 
 		console.log('shopVm.calculate', shopVm.calculate)
 
@@ -47,10 +48,12 @@
 				shopVm.hst 		= shopVm.subtotal*0.13;
 				shopVm.total 	= shopVm.subtotal*1.13;
 			}
-			// return self.hst;
-			// return self.total;
 		}
 
+		function checkout() {
+			productSrv.newOrder.purchaseDetails.push(shopVm.cart);
+			console.log("checkout", shopVm.cart)
+		}
 
 		function removeCart(productId) {
 			console.log("remove cart early")
@@ -60,24 +63,11 @@
 				}
 			}
 			calculate()
-				// .then(function(){
-				// 	$state.reload();
-				// })
 			console.log("execute removeCart")
 			console.log("Cart", shopVm.cart)
 		}
-
-
 		calculate();
 
-
-		// function getItemInfo(){
-		// 	for(var i=0; i<shopVm.cart.length; i++) {
-		// 		var productInfo = shopVm.cart[i].item;
-		// 	}
-		// 	return productInfo;
-		// 	console.log(productInfo)
-		// }
 	}
 
 })();

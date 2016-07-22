@@ -72,7 +72,9 @@
 				}
 
 		 }
+
 		 shopVm.CollectionSelect = CollectionSelect;
+
 			
 			function CollectionSelect(item) {
 				shopVm.selectedCollection = item;
@@ -109,8 +111,6 @@
 	}
 
 
-
-			
 })();
 
 

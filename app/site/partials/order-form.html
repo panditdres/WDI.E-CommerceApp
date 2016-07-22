@@ -24,7 +24,7 @@
 	      <input type="number" class="form-control cfc" placeholder="Write phone number here..."
 	      ng-minlength="5"
 	      ng-maxlength="12"
-	      ng-model="ctrl.lastname"
+	      ng-model="ctrl.phoneNum"
 	      required
 	      >
 	      
@@ -58,7 +58,7 @@
 	      required>
 	      
 	      <label class="custom_lebel">Address *</label>
-	      <input type="number" class="form-control cfc" placeholder="Write phone number here..."
+	      <input type="text" class="form-control cfc" placeholder="Write address here..."
 	      ng-minlength="5"
 	      ng-maxlength="12"
 	      ng-model="ctrl.address"
@@ -73,12 +73,19 @@
 	 	<hr></hr>
 
 	      <label class="custom_lebel">CREDIT CARD NUMBER *</label>
-	      <input type="number" class="form-control cfc" placeholder="Write name here..."
+	      <input type="number" class="form-control cfc" placeholder="Write card number here..."
 	      ng-minlength="10"
 	      ng-maxlength="20"
 	      ng-model="ctrl.creditcard"
 	      required>
 	    
+	      <label class="custom_lebel">CREDIT CARD CVV *</label>
+	      <input type="number" class="form-control cfc" placeholder="CDN number here..."
+	      ng-minlength="10"
+	      ng-maxlength="20"
+	      ng-model="ctrl.creditcard"
+	      required>
+
 	      <label class="custom_lebel">NAME ON CARD</label>
 	      <input type="text" class="form-control cfc" placeholder="Write last name here..."
 	      ng-minlength="3"
@@ -88,7 +95,7 @@
 	   </div>
 
 
-	   <button id="submit-button" type="button" class="btn btn-primary btn-lg button4" ng-click="open()">Submit</button>
+	   <button id="submit-button" type="button" class="btn btn-primary btn-lg button4" ui-sref="shop.summary" ng-submit="ctrl.submitOrder()" ng-click="ctrl.submitOrder(); ctrl.addOrder(ctrl.newOrder) ">Submit</button>
 
 
 </div>

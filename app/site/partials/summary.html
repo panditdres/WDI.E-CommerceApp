@@ -1,0 +1,34 @@
+<div class="container">
+
+
+  <div id="summary" class="checkout-container">
+
+    	<h1>Your Order Summary</h1>
+      <hr>
+
+    	<div ng-repeat="items in ctrl.orders[0].purchaseDetails">
+        <hr>
+        <h5>Name: {{items[0].item.name}}</h5>
+        <h5>Collection: {{items[0].item.name}}</h5>
+        <h5>Quantity: {{items[0].amount}}</h5>
+        <h5>Price: {{items[0].item.price | currency}}</h5>
+        <h5>Order Number: {{ctrl.randomOrderNum()}}</h5>
+        <h5>Shipping Details: UPS -  {{ctrl.randomShipping()}}</h5>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+    	<button id="checkout-button" type="button" class="btn btn-primary btn-lg button4 button" ui-sref="shop.main">Return</button>
+
+  </div>
+  <hr></hr>
+    
+</div>
