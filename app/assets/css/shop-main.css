@@ -7,7 +7,7 @@
 .jumbo-image{
 	height: 500px;
 	background-size: cover;
-	background-image: url("../img/glasses.img/shoppingmain/hero1.jpg");
+	background-image: url("../img/glasses.img/shoppingmain/hero1-bw.jpg");
 }
 
 /*CATEGORY*/
@@ -58,25 +58,25 @@
 .doc-img {
 	height: 100%;
 	background-size: cover;
-	background-image: url("../img/glasses.img/shoppingmain/category-doc.jpg");
+	background-image: url("../img/glasses.img/shoppingmain/category-doc-bw.jpg");
 }
 
 .micro-img {
 	height: 100%;
 	background-size: cover;
-	background-image: url("../img/glasses.img/shoppingmain/category-micro.jpg");
+	background-image: url("../img/glasses.img/shoppingmain/category-micro-bw.jpg");
 }
 
 .state-img {
 	height: 100%;
 	background-size: cover;
-	background-image: url("../img/glasses.img/shoppingmain/category-state.jpg");
+	background-image: url("../img/glasses.img/shoppingmain/category-state-bw.jpg");
 }
 
 .snow-img {
 	height: 100%;
 	background-size: cover;
-	background-image: url("../img/glasses.img/shoppingmain/category-snow.jpg");
+	background-image: url("../img/glasses.img/shoppingmain/category-snow-bw.jpg");
 }
 
 .doc-img > .pic-img {

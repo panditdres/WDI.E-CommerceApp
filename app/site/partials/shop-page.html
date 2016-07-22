@@ -11,31 +11,43 @@
 
 						<img class="images" src="../../assets/img/Glass_icons/Doc.png">
 						<p class="cat-names"> doc </p>
+
+						<div class="colorOverlay">
+					 	</div>
+
 					</div>
 						
 					<div ng-click="ctrl.CollectionSelect('micro')" class="col-lg-6 col-md-6 centered-text">
 						<img class="images" src="../../assets/img/Glass_icons/Micro.png">
 						<p class="cat-names"> micro </p>
-					</div>
+						<div class="colorOverlay">
+						</div>
+					</div>		
+
 				</div>
 				
 				<div class="row"> 
 					<div ng-click="ctrl.CollectionSelect('state')" class="col-lg-6 col-md-6 centered-text">
 						<img class="images" src="../../assets/img/Glass_icons/State.png">
 						<p> state </p>
+						<div class="colorOverlay">
+						</div>
 					</div>
 					
 					<div ng-click="ctrl.CollectionSelect('snow')" class="col-lg-6 col-md-6 centered-text">
 						<img class="images" src="../../assets/img/Glass_icons/Snow.png">
 						<p> snow </p>
+						<div class="colorOverlay">
+						</div>
 					</div>		    		
-    		
-	    			<select class="form-control" ng-options="option as option.label for option in ctrl.sortOptions" ng-model="ctrl.selected">
-	     		 	</select>
+    					
 				</div>
 
-				  <!-- radio buttons  -->
-	            <div class="radio-buttons">
+				  <!-- side options -->
+	            <div class="selector-options">
+
+	            	<select class="form-control" ng-options="option as option.label for option in ctrl.sortOptions" ng-model="ctrl.selected">
+		     		 	</select>
 					<form action="demo_form.asp" method="get">
 
 						<div class="forms" ng-click="ctrl.check()"> 
@@ -53,6 +65,7 @@
 					</form>
 	            </div>
 			</div>
+
 			<!-- COLLECTION-->
       		<div class="col-md-10">
                 <div class="col-md-4" ng-repeat="item in ctrl.products | filter: ctrl.selectFilter | filter: ctrl.selectedCollection | orderBy: ctrl.selected.sortField : ctrl.selected.reverse " ng-click="ctrl.goToProductPage(item.id)">
@@ -74,7 +87,7 @@
                 		</div>
                 	</div>
                 </div>
-            </div>
+            </div> <!-- end of collection -->
           
         </div><!-- end of row -->
 	</div> <!-- end of container -->

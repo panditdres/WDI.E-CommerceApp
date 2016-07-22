@@ -52,9 +52,11 @@
 }
 
 .form-control {
-	WIDTH: 30;
+	width: 75%;
+	height: 60%;
 
 }
+
 
 /*SIDE BAR*/
 
@@ -69,6 +71,24 @@
 .images {
 	width: 100%;
 	background-size: cover;
+
+}
+
+.colorOverlay { 
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.1);
+	-webkit-transition: opacity .25s ease;
+	-moz-transition: opacity .25s ease;
+	border-radius: 5px;
+}
+
+.centered-text:hover .colorOverlay{
+	opacity: 1;
 }
 
 .forms {
@@ -76,8 +96,8 @@
 	font-size: 12px;
 }
 
-.radio-buttons {
-	padding-top: 5%;
+.selector-options {
+	padding-top: 10%;
 }
 
 
