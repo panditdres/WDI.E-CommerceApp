@@ -77,26 +77,12 @@
 
 			
 			function CollectionSelect(item) {
-				shopVm.selectedCollection = item;
-				console.log(shopVm.selectedCollection)
-					// 	if (item.description.collection == "Doc") {
-					// 		return description.collection;
-					// 		console.log('Doc');
-					// } else if (item.description.collection == "Micro") {
-					// 		return description.collection;
-					// 		console.log('Micro')
-						
-					// } else if (item.description.collection == "State") {
-					// 		return description.collection;
-					// 		console.log('State')
-						
-					// } else if (item.description.collection == "Snow") {
-					// 		return description.collection;
-					// 		console.log('Snow')
-
-					// } else {
-					// 	console.log('none')
-					// }
+					if (shopVm.selectedCollection == item) {
+						shopVm.selectedCollection = '';
+					} else {
+						shopVm.selectedCollection = item;
+						console.log(shopVm.selectedCollection)
+					}
 		 }
 
 		 //Sort options by price
