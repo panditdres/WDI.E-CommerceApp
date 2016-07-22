@@ -43,7 +43,10 @@
 	width:75%;
 	font-size:1rem;
 	color:#555;
+}
 
+#admin th{
+	text-align: center;
 }
 
 #admin .products-list a{

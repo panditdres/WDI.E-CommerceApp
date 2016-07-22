@@ -33,10 +33,10 @@
 		    shopVm.products = productSrv.products;
 		});
 
-		// function addCart(product) {
-		// 	productSrv.addCart(shopVm.product.data.product, shopVm.quantity);
-  //           toastr.success(text,"Wunderbar!" {{item.name}} "has been added to your cart");
-		// }
+		function addCart(product) {
+			productSrv.addCart(shopVm.product.data.product, shopVm.quantity);
+//            toastr.success(text,"Wunderbar!" {{item.name}} "has been added to your cart");
+		}
 
 	}
 
