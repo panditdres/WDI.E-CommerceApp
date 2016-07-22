@@ -16,10 +16,6 @@
 
 		console.log('shopVm.calculate', shopVm.calculate)
 
-		// shopVm.getItemAmount  = getItemAmount;
-		// shopVm.cartItemAmount = shopVm.getItemAmount();
-		console.log("Cart Item",shopVm.cart)
-
 		//watch for any changes to model data
 		$scope.$watch(function(){
 	    	return productSrv.products;
@@ -62,12 +58,12 @@
 					shopVm.cart.splice(i,1);
 				}
 			}
-			calculate()
+			calculate();
+			localStorage.cart = JSON.stringify(shopVm.cart);
 			console.log("execute removeCart")
 			console.log("Cart", shopVm.cart)
 		}
 		calculate();
-
 	}
 
 })();

@@ -11,9 +11,7 @@
 		shopVm.newOrder = productSrv.newOrder;
 		shopVm.products = products;
 		shopVm.submitOrder = submitOrder;
-		shopVm.thankYou = thankYou;
-		// console.log("SHOP VM PRODUCTS",shopVm.products.category)
-
+		
 		//watch for any changes to model data
 		$scope.$watch(function(){
 	    	return productSrv.products;
@@ -39,11 +37,6 @@
 			return OrderObject;	
 		}	
 
-		function thankYou() {
-			alert("Thank you for your order")
-				$state.go('shop.main');
-		}
-	
 	}
 
 })();

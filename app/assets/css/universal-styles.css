@@ -122,7 +122,12 @@ p.company {
 	border-radius: 2px;
 	display: inline-block;
 } 
-
+#tablefont {
+	text-align: center;
+}
+.table>tbody>tr>td {
+	vertical-align: middle;
+}
 /*FOOTER STYLING*/
 .footer-right{
 	float:right;
@@ -131,4 +136,8 @@ p.company {
 
 footer {
 	margin-top: 2%;
+}
+
+.btn.trash {
+	background-color: transparent;
 }

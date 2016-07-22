@@ -23,8 +23,6 @@
 		}, function (newValue) {
 		    navVm.cart = productSrv.cart;
 		});
-		
-		console.log("LEngth cart",navVm.cart.length)
 
 		function getTotalAmount(){
 			navVm.amount = 0;
@@ -35,7 +33,6 @@
 			return navVm.amount;
 			console.log("Amount",navVm.amount)
 		}
-
 		getTotalAmount();
 	}
 

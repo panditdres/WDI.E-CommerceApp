@@ -17,7 +17,6 @@
       <thead>
         <tr>
           <th id="tablefont">Quantity</th>
-          <th></th>
           <th id="tablefont">Item</th>
           <th id="tablefont">Price</th>
         </tr>
@@ -25,10 +24,12 @@
       <tbody>
         <tr ng-repeat="items in ctrl.cart">
           <td>{{items.amount}}</td>
-          <td><img ng-src="{{items.item.image}}"></td>
-          <td>{{items.item.name}} - {{items.item.category}} </td>
+          <td>
+            <img ng-src="{{items.item.image}}">
+            {{items.item.name}} - {{items.item.category}} 
+          </td>
           <td>${{items.item.price}}</td>
-          <td><button class="btn"><i class="fa fa-trash-o" aria-hidden="true" ng-click="ctrl.removeCart(items.item.id)"></i></button></td>
+          <td><button class="btn trash"><i class="fa fa-trash-o" aria-hidden="true" ng-click="ctrl.removeCart(items.item.id)"></i></button></td>
         </tr>
       </tbody>
     </table>

@@ -7,11 +7,7 @@
 	function ShopCtrl($scope,productSrv,products,$state){
 		var shopVm = this;
 
-		//TODO #3 Capture resolved products for view
 		shopVm.products = products;
-		// shopVm.getProducts = productSrv.getProduct();
-		
-		console.log("SHOP VM PRODUCTS",shopVm.products)
 
 		//watch for any changes to model data
 		$scope.$watch(function(){
@@ -33,17 +29,9 @@
 			$state.go('shop.productPage',{'productId':id});
 		}
 
-
 		shopVm.check = function() {
 			console.log(shopVm.sunCheck)
 		}
-
-
-
-
-		// shopVm.check = function() {
-		// 	console.log(shopVm.sunCheck)
-		// }
 
 		shopVm.selectFilter = selectFilter;
 		shopVm.showAll = true;
@@ -53,50 +41,42 @@
 
 		function selectFilter(item) {
 			console.log(item);
-				if (shopVm.showAll == true) {
-						return true
-					}
-				// else if (shopVm.sunCheck == true || shopVm.eyeCheck == true) {
-				else if (item.category == "Sun Glasses" && shopVm.sunCheck == true) {
-						console.log('sunglass');
-						return true
-					}
-				// } else if (shopVm.eyeCheck == true) {
-				else if (item.category == "Eye Glasses" && shopVm.eyeCheck == true) {
-						console.log('eyeglass')
-						return true
-					
-				} else {
-					console.log('none') //nothing will show up on page
-					return false
+			if (shopVm.showAll == true) {
+					return true
 				}
+			// else if (shopVm.sunCheck == true || shopVm.eyeCheck == true) {
+			else if (item.category == "Sun Glasses" && shopVm.sunCheck == true) {
+					console.log('sunglass');
+					return true
+				}
+			// } else if (shopVm.eyeCheck == true) {
+			else if (item.category == "Eye Glasses" && shopVm.eyeCheck == true) {
+					console.log('eyeglass')
+					return true
+				
+			} else {
+				console.log('none') //nothing will show up on page
+				return false
+			}
+		}
 
+		shopVm.CollectionSelect = CollectionSelect;
+
+		function CollectionSelect(item) {
+			if (shopVm.selectedCollection == item) {
+				shopVm.selectedCollection = '';
+			} else {
+				shopVm.selectedCollection = item;
+				console.log(shopVm.selectedCollection)
+			}
 		 }
-
-		 shopVm.CollectionSelect = CollectionSelect;
-
-			
-			function CollectionSelect(item) {
-					if (shopVm.selectedCollection == item) {
-						shopVm.selectedCollection = '';
-					} else {
-						shopVm.selectedCollection = item;
-						console.log(shopVm.selectedCollection)
-					}
-		 }
-
-		 //Sort options by price
 
 		shopVm.sortOptions = [
 		    {label: 'Low to High', sortField: 'price', reverse: false},
 		    {label: 'High to Low', sortField: 'price', reverse: true}
 		];
-
 		shopVm.selected = shopVm.sortOptions[0];
-
 	}
-
-
 })();
 
 

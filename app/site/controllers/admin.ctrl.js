@@ -22,10 +22,6 @@
 			$state.go('auth');
 		}
 					
-		// adminVm.products;
-		// if(adminVm.products.length > 0 ){
-		// 	adminVm.is_products = true;
-		// }
 		console.log(adminVm.orders);
 
 		//watch for updates to products object
