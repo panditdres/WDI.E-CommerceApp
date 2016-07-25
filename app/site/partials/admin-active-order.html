@@ -16,6 +16,7 @@
 			<th>&nbsp;</th>
 		</tr>
 		<tr ng-repeat="order in ctrl.orders">
+	<!-- 		<td>{{order.purchaseDetails[0][0].item.id}}</td> -->
 			<td>
 				<p>Firstname: {{order.buyerInfo.firstname}}</p> 
 				<o>Lastname: {{order.buyerInfo.lastname}}</p>
@@ -37,7 +38,7 @@
 				<p>{{order.purchaseDetails[0][0].amount}}</p>
 			</td>
 			<td>
-				<a ng-click="ctrl.editProduct(product)">Order completed</a>
+				<a ng-click="ctrl.removeOrder(order.purchaseDetails[0][0].item.id)">Order completed</a>
 			</td>
 		</tr>
 	</table>

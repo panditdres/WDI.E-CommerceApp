@@ -22,6 +22,7 @@
 		self.deleteProduct 		= deleteProduct;
 		self.addCart 			= addCart;
 		self.addOrder			= addOrder;
+		self.removeOrder		= removeOrder;
 		self.randomOrderNum 	= randomOrderNum;
 		self.randomShipping 	= randomShipping;
 
@@ -29,6 +30,8 @@
 			buyerInfo: {},// form info
 			purchaseDetails: []//Cart
 		}
+
+		console.log("ORDERS", self.orders)
 
 		if(localStorage.cart) {
 			self.cart = JSON.parse(localStorage.cart);
@@ -47,7 +50,7 @@
 				self.products = res.data.products;
 
 				for (var i=0; i< self.products.length; i++) {
-					console.log(self.products[i].description);
+					// console.log(self.products[i].description);
 					self.products[i].description = JSON.parse(self.products[i].description);
 					// console.log(JSON.parse(self.products[i].description))
 				}
@@ -133,6 +136,7 @@
 		}
 
 		function removeProduct(productId){
+			console.log("Remove order")
 			for(var i=0;i < self.products.length;i++){
 				if(self.products[i].id == productId){
 					delete self.products[i];
@@ -162,7 +166,17 @@
 			console.log("Order",self.orders)
 			return self.orders;		
 		}
-		console.log('end of service')
+
+		function removeOrder(productId) {
+			console.log("Remove")
+			for (var i = 0; i < self.orders.length; i++) {
+				if(self.orders[i].purchaseDetails[0][0].item.id == productId) {
+					self.orders.splice(i,1);
+				}
+			}
+			localStorage.cart = JSON.stringify(self.cart);
+			localStorage.orders = JSON.stringify(self.orders);
+		}
 
 		function randomOrderNum() {
 			return Math.floor(Math.random() * 100000000)  + 1;

@@ -6,11 +6,11 @@
 	function SummaryCtrl($scope,productSrv,products){
 		var shopVm = this;
 
-		shopVm.addOrder = productSrv.addOrder;
-		shopVm.newOrder = productSrv.newOrder;
-		shopVm.products = products;
-		shopVm.orders 	= productSrv.orders;
-		shopVm.cart 	= productSrv.cart;
+		shopVm.addOrder 	  = productSrv.addOrder;
+		shopVm.newOrder 	  = productSrv.newOrder;
+		shopVm.products 	  = products;
+		shopVm.orders 		  = productSrv.orders;
+		shopVm.cart 		  = productSrv.cart;
 		shopVm.randomOrderNum = productSrv.randomOrderNum;
 		shopVm.randomShipping = productSrv.randomShipping;
 

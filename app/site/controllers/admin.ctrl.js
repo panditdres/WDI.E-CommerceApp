@@ -11,6 +11,7 @@
 		// adminVm.newOrder = productSrv.newOrder;
 		adminVm.orders 	= productSrv.orders;
 		adminVm.cart 	= productSrv.cart;
+		adminVm.removeOrder 	  = productSrv.removeOrder;
 		adminVm.randomOrderNum = productSrv.randomOrderNum();
 		adminVm.randomShipping = productSrv.randomShipping();
 		//public functions
